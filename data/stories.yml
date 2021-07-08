@@ -1,0 +1,105 @@
+version: "2.0"
+stories:
+- story: out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+- story: assessing accident
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_how_mayhelp
+  - intent: assess_accident
+  - action: utter_assess_accident
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_great
+- story: injury path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: blister
+  - action: utter_blister
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: injury path 2
+  steps:
+  - intent: punctured_wound
+  - action: utter_punctured_wound
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_great
+  - action: utter_goodbye
+- story: injury path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: nose_bleed
+  - action: utter_nose_bleed
+  - intent: handle_emergency
+  - action: utter_handle_emergency
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: injury path 4
+  steps:
+  - intent: bruise
+  - action: utter_bruise
+  - intent: handle_emergency
+  - action: utter_handle_emergency
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_great
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: hyperventilation
+  - action: utter_hyperventilation
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_great
+  - action: utter_goodbye
+- story: assesing acident for child
+  steps:
+  - intent: assess_accident
+  - action: utter_assess_accident
+  - intent: CPR_child
+  - action: utter_CPR_child
+  - intent: give_breaths
+  - action: utter_give_breaths
+  - intent: helpful
+  - action: utter_great
+- story: handling emergency for an unconscious patient
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_how_mayhelp
+  - intent: handle_emergency
+  - action: utter_handle_emergency
+  - intent: handle_emergency_unconscious
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+  - intent: helpful
+  - action: utter_great
+- story: interactive_story_1
+  steps:
+  - intent: pulse_check
+  - action: utter_pulse_check
+  - intent: helpful
+  - action: utter_great
+- story: Story from Conversation ID 886607f35aff425d9f6d97e58b5f3e3b
+  steps:
+  - action: utter_how_mayhelp
+  - action: utter_burn
+  - intent: burn
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: helpful
+  - action: utter_great
+- story: Story from Conversation ID fd2f0e1aa8b6473b996328a213c30092
+  steps:
+  - intent: shock
+  - intent: handle_emergency_unconscious
+  - action: utter_give_breaths

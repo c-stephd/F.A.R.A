@@ -1,0 +1,491 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+- intent: helpful
+  examples: |
+    - thanks
+    - thank you
+    - I am grateful
+    - Thanks for trusting me
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes you were
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - it did not help
+- intent: out_of_scope
+  examples: |
+    - that's not what I want
+    - This is not the right thing
+    - wrong injury
+    - wait stop
+    - you're no help
+    - this is no help at all
+    - how old are you
+    - I want to order a pizza
+    - tell me the weather
+    - this isn't working
+    - I already told you that
+    - don't like that
+    - I don't want to tell you that
+    - none of your business
+    - that's not right
+    - stop asking
+    - nevermind
+    - I want to do something else
+    - I changed my mind
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you a verified doctor?
+    - can you really help me?
+    - how do i know you are right?
+- intent: assess_accident
+  examples: |
+    - How do I assess an accident?
+    - An accident occurred, what do I do?
+    - How do I assess a road accident?
+    - What should I do when an accident happens?
+    - an accident occured, i don''t know what to do
+- intent: handle_emergency
+  examples: |
+    - How do I handle an emergency?
+    - There is person in an accident, what do I do?
+    - What to do for a patient in an accident?
+    - What to do if a patient in a road accident?
+    - i would like to know how to handle emergencies
+- intent: handle_emergency_conscious
+  examples: |
+    - How do I handle an emergency for a conscious person?
+    - There is a conscious person in an accident, what do I do?
+    - What to do for a conscious patient?
+    - What to do if a patient is conscious?
+- intent: handle_emergency_unconscious
+  examples: |
+    - How do I handle an emergency for an unconscious person?
+    - There is an unconscious person in an accident, what do I do?
+    - What to do for a unconscious patient?
+    - What to do if a patient is unconscious?
+    - the patient is unconscious
+- intent: recovery_position
+  examples: |
+    - How do i put a patient in recovery position?
+    - What is the position for recovery position?
+    - What is the safest position for the recovery of a patient?
+    - What is recovery position?
+    - how do i put her in recovery position?
+- intent: recovery_position_spinal_injury
+  examples: |
+    - How do i put a patient with spinal injury in recovery position?
+    - What is the position for recovery position wih spinal injury?
+    - What is the safest position for the recovery of a patient with spinal injury?
+    - What is recovery position for a patient with spinal injury?
+- intent: CPR
+  examples: |
+    - How do I perform CPR?
+    - How do i perform CPR?
+    - How to do CPR?
+    - What is CPR?
+- intent: CPR_adult
+  examples: |
+    - How do I perform CPR for an adult?
+    - How do i perform CPR if the person is an adult?
+    - How to do CPR for an adult?
+    - What is CPR for an adult?
+- intent: CPR_child
+  examples: |
+    - How do I perform CPR for a child?
+    - How do i perform CPR for a child?
+    - How to do CPR for a child above 1 years old?
+    - What is CPR for a child?
+    - how do i perform cpr for my child
+    - my daughter is not breathing she might need cpr
+- intent: CPR_infant
+  examples: |
+    - How do I perform CPR for an infant below 1 years?
+    - How do i perform CPR for child below 1 years old?
+    - How to do CPR for a baby?
+    - What is CPR for a baby?
+- intent: give_breaths
+  examples: |
+    - How do i give breaths to a patient during CPR?
+    - How do i give breaths to a patient?
+    - What is the procedure for giving breaths?
+    - How to give breaths to a patient?
+    - how do i go about giving breaths during the cpr
+- intent: manage_injured
+  examples: |
+    - How do i manage an injured person?
+    - What is the first step to cure an injured person?
+    - What steps do i follow to treat an injured person?
+    - In what order do i treat the injured?
+- intent: head_to_toe_examination
+  examples: |
+    - How do I examine the patient's body?
+    - How do I know what is wrong with the patient?
+    - How do I check what is wrong with the patient?
+    - What is wrong with the patient?
+    - How do I do a full body examination of the patient?
+- intent: pulse_check
+  examples: |
+    - How do i check for pulse?
+    - Procedure for checking pulse?
+    - How do i know the pulse of a patient?
+    - Where do i check the pulse on the body?
+    - i am not sure but i want to check my friends pulse?
+- intent: drowning
+  examples: |
+    - How do i treat a person that is drowning?
+    - What do i do to a person that is drowning?
+    - Someone is drowning, what do i do?
+    - Treatment for a drowning person?
+- intent: mild_choking
+  examples: |
+    - How do i treat a person that is choking?
+    - What do i do to a person that is choking?
+    - Someone is choking, what do i do?
+    - Treatment for a mild choking person?
+- intent: severe_choking
+  examples: |
+    - How do i treat a person that is choking severely?
+    - What do i do to a person that is choking seriously?
+    - Someone is choking seriously, what should i do?
+    - Treatment for a severe choking person?
+- intent: cardiac_arrest
+  examples: |
+    - How do i treat a person that having a cardiac arrest?
+    - What do i do to a person that having cardiac arrest?
+    - Someone having cardiac arrest, what do i do?
+    - Treatment for a person having cardiac arrest?
+- intent: heart_attack
+  examples: |
+    - How do i treat a person that having a heart attack?
+    - What do i do to a person that having heart attack?
+    - Someone having heart attack, what do i do?
+    - Treatment for a person having heart attack?
+- intent: heart_attack_conscious
+  examples: |
+    - How do i treat a person that having a heart attack that is still conscious?
+    - What do i do to a conscious person that having heart attack?
+    - Someone having heart attack but is conscious, what do i do?
+    - Treatment for a conscious person having heart attack?
+    - Someone that is awake is having a heart attack
+- intent: heart_attack_unconscious
+  examples: |
+    - How do i treat a person that having a heart attack that is unconscious?
+    - What do i do to an uconscious person that having heart attack?
+    - Someone having heart attack but is unconscious, what do i do?
+    - Treatment for an unconscious person having heart attack?
+    - Someone that is having a heart attack and is not responding
+- intent: stroke
+  examples: |
+    - How do i treat a person that having a stroke?
+    - What do i do to a person that having stroke?
+    - Someone having a stroke, what do i do?
+    - Treatment for a person having a stroke?
+- intent: fainting
+  examples: |
+    - How do i treat a person that fainted?
+    - What do i do to a person that fainted?
+    - Someone just fainted, what do i do?
+    - Treatment for a person fainted?
+    - my friend just fainted
+- intent: external_bleeding
+  examples: |
+    - How do i treat a person that is bleeding seriously?
+    - What do i do to a person that is bleeding severely?
+    - Someone is bleeding excessively, what do i do?
+    - Treatment for external bleeding?
+    - Treatment for a person that is bleeding too much?
+- intent: internal_bleeding
+  examples: |
+    - How do i treat a person that has internal bleeding?
+    - What do i do to a person that has internal bleeding?
+    - Someone has internal bleeding, what do i do?
+    - Treatment for internal bleeding?
+    - Treatment for a person that has internal bleeding?
+- intent: open_wound
+  examples: |
+    - How do i treat a person with open wound?
+    - What do i do to a person with open wound?
+    - Someone has open wound, what should i do?
+    - Treatment for open wound?
+    - Treatment for a person with open wound?
+- intent: amputation
+  examples: |
+    - How do i treat a person with amputation?
+    - What do i do to a person with a cut off finger?
+    - What do i do to a person with a cut off leg?
+    - What do i do to a person with a cut off hand?
+    - What do i do to a person with a turn off toe?
+    - Someone has amputation, what should i do?
+    - Treatment for amputation?
+    - Treatment for a person with a cut off body part?
+- intent: punctured_wound
+  examples: |
+    - How do i treat a person with punctured wound?
+    - What do i do to a person with punctured wound?
+    - Someone has punctured wound, what should i do?
+    - Treatment for punctured wound?
+    - Treatment for a person with punctured wound?
+- intent: crush_injury
+  examples: |
+    - How do i treat a person with crush injury?
+    - What do i do to a person with a crushed leg?
+    - What do i do to a person with a crushed hand?
+    - What do treat a person with a crushed body part?
+    - Someone has a heavy object on him, what should i do?
+    - Someone has a crushed injury, what should i do?
+    - Treatment for crushed body part?
+    - Treatment for a person with a crushed injury?
+- intent: burn
+  examples: |
+    - How do i treat a person with burns?
+    - What do i do to a person with burns?
+    - Someone has burns, what should i do?
+    - Treatment for burns?
+    - Treatment for a person with burns?
+- intent: broken_bone
+  examples: |
+    - How do i treat a person with a broken bone?
+    - What do i do to a person with a broken leg?
+    - Someone has a broken hand, what should i do?
+    - Treatment for broken bone?
+    - Treatment for a person with broken bone?
+- intent: dislocation
+  examples: |
+    - How do i treat a person with dislocation?
+    - What do i do to a person with dislocated leg?
+    - Someone has a dislocation, what should i do?
+    - Treatment for dislocated limb?
+    - Treatment for dislocated shoulder?
+    - Treatment for dislocated wrist?
+    - Treatment for a person with dislocated leg?
+- intent: strain
+  examples: |
+    - How do i treat a person with a strain?
+    - What do i do to a person with muscle strain?
+    - Someone has muscle strain, what should i do?
+    - Treatment for muscle strain?
+    - Treatment for a person with muscle strain?
+- intent: sprain
+  examples: |
+    - How do i treat a person with a sprained ankle?
+    - What do i do to a person with sprained ankle?
+    - Someone has a sprained ankle, what should i do?
+    - Treatment for sprained ankle?
+    - Treatment for a person with sprain?
+    - Treatment for swelling and bruising in the ankle?
+- intent: head_injury
+  examples: |
+    - How do i treat a person with head injury?
+    - What do i do to a person with head injury?
+    - Someone is bleeding on the head, what should i do?
+    - Treatment for head injury?
+    - Treatment for a person bleeding on the head?
+    - Treatment for wound on the scalp?
+    - Treatment for wound on the face?
+- intent: head_injury_conscious
+  examples: |
+    - How do i treat a conscious person with head injury?
+    - What do i do to an awake person with head injury?
+    - Someone is bleeding on the head but is awake, what should i do?
+    - Treatment for conscious head injury?
+    - Treatment for a conscious person bleeding on the head?
+- intent: head_injury_unconscious
+  examples: |
+    - How do i treat a unconscious person with head injury?
+    - What do i do to a person that is not awake with head injury?
+    - Someone is bleeding on the head but is awake, what should i do?
+    - Treatment for unconscious head injury?
+    - Treatment for an unconscious person bleeding on the head?
+- intent: spinal_neck_injury
+  examples: |
+    - How do i treat a person with neck injury?
+    - What do i do to a person with spinal injury?
+    - Someone can't move below the neck, what should i do?
+    - Treatment for spinal injury?
+    - Treatment for neck injury?
+    - Treatment for loss of movement below the site of injury?
+- intent: spinal_neck_injury_conscious
+  examples: |
+    - How do i treat a conscious person with neck injury?
+    - What do i do to a conscious person with spinal injury?
+    - Someone can't move below the neck and is awake, what should i do?
+    - Treatment for conscious spinal injury?
+    - Treatment for conscious neck injury?
+- intent: spinal_neck_injury_unconscious
+  examples: |
+    - How do i treat an unconscious person with neck injury?
+    - What do i do to an unconscious person with spinal injury?
+    - Someone can't move below the neck and is not awake, what should i do?
+    - Treatment for unconscious spinal injury?
+    - Treatment for unconscious neck injury?
+- intent: abdominal_injury
+  examples: |
+    - How do i treat a person with abdominal injury?
+    - What do i do to a person with stomach injury?
+    - Someone is bleeding from the stomach, what should i do?
+    - Treatment for severe pain in the stomach?
+    - Treatment for injury in the stomach?
+    - Treatment for protruding intestines from abdominal injury?
+    - Treatment for wound on the stomach?
+- intent: penetrating_chest_wound
+  examples: |
+    - How do i treat a person with penetrating chest wound?
+    - What do i do to a person with chest injury?
+    - Someone is bleeding from the chest, what should i do?
+    - Treatment for chest injury?
+    - Treatment for a person with chest wound?
+    - Treatment for wound on the chest?
+    - How to treat injury on the chest with a penetrating object?
+- intent: eye_injury
+  examples: |
+    - How do i treat a person with an eye injury?
+    - What do i do to a person with an eye injury?
+    - Someone has an eye injury, what should i do?
+    - Treatment for eye injury?
+    - Treatment for a person bleeding in the eyes?
+- intent: embedded_object_in_eye
+  examples: |
+    - How do i treat a person with an object in the eyes?
+    - What do i do to a person with an object in the eyes?
+    - Someone has an object in the eyes, what should i do?
+    - Treatment for object in the eyes?
+    - Treatment for a person with an object in the eyes?
+- intent: penatrating_object_in_eye
+  examples: |
+    - How do i treat a person with a penetrating object in the eyes?
+    - What do i do to a person with a penetrating object in the eyes?
+    - Someone has a penetrating object in the eyes, what should i do?
+    - Treatment for a penetrating object in the eyes?
+    - Treatment for a person with a penetrating object in the eyes?
+- intent: anaphylaxis
+  examples: |
+    - How do i treat a person with anaphylaxis?
+    - What do i do to a person with anaphylaxis?
+    - Someone has serious allergic reactions, what should i do?
+    - Treatment for anaphylaxis?
+    - Treatment for a person with serious reactions to allergy?
+- intent: angina
+  examples: |
+    - How do i treat a person with angina?
+    - What do i do to a person with angina?
+    - Someone has angina, what should i do?
+    - Treatment for angina?
+    - Treatment for a person with angina?
+- intent: nose_bleed
+  examples: |
+    - How do i treat a person with nose bleed?
+    - What do i do to a person that is bleeding from the nose?
+    - Someone has nose bleed, what should i do?
+    - Treatment for nose bleeding?
+    - Treatment for a person bleeding nose?
+- intent: bruise
+  examples: |
+    - How do i treat a person with bruise?
+    - What do i do to a person that has a bruise?
+    - Someone has a bruise, what should i do?
+    - Treatment for bruise?
+    - Treatment for a person with bruises?
+- intent: shock
+  examples: |
+    - How do i treat a person in shock?
+    - What do i do to a person that in shock?
+    - Someone is in shock, what should i do?
+    - Treatment for shock?
+    - Treatment for a person in shock?
+- intent: blister
+  examples: |
+    - How do i treat a person with blisters?
+    - What do i do to a person that has a blister?
+    - Someone has blisters, what should i do?
+    - Treatment for blisters?
+    - Treatment for a person with blisters?
+- intent: taking_casualty_to_hospital
+  examples: |
+    - How do I take a patient to the hospital?
+    - An accident occurred, what do I take the patient to the hospital?
+    - How do I transport a casualty of an accident to the hospital?
+    - Procedure for taking a patient to the hospital?
+- intent: ear_bleeding
+  examples: |
+    - How do i treat a person bleeding in the ear?
+    - What do i do to a person that is bleeding in the ear?
+    - Someone is bleeding in the ear, what should i do?
+    - Treatment for ear bleeding?
+    - Treatment for a person bleeding in the ear?
+- intent: hyperventilation
+  examples: |
+    - How do i treat a person that is hyperventilating?
+    - What do i do to a person that is hyperventilating?
+    - Someone is hyperventilating, what should i do?
+    - Treatment for hyperventilation?
+    - Cure for a person hyperventilating?
+    - someone is hyperventilating
+- intent: asthma
+  examples: |
+    - How do i treat a person with asthma?
+    - What do i do to a person that has a asthma?
+    - Someone has asthma, what should i do?
+    - Treatment for asthma?
+    - Treatment for a person under asthmatic attack?
+- intent: cuts
+  examples: |
+    - What to do if Cuts?
+    - How to cure Cuts?
+    - Which medicine to apply for Cuts?
+    - what to apply on cuts?
+    - Cuts
+- intent: abrasion
+  examples: |
+    - how do you treat abrasions?
+    - Do Abrasions cause scars?
+    - Abrasions
+    - What to do if abrasions?
+    - Which medicine to apply for abrasions?
+    - How to cure abrasions?
+- intent: broken_toe
+  examples: |
+    - How do you treat a Broken Toe?
+    - what to do if i get a Broken Toe?
+    - Which medicine to take if I get a Broken Toe?
+    - How to cure Broken Toe?

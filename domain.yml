@@ -1,0 +1,691 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- helpful:
+    use_entities: true
+- assess_accident:
+    use_entities: true
+- handle_emergency:
+    use_entities: true
+- handle_emergency_conscious:
+    use_entities: true
+- handle_emergency_unconscious:
+    use_entities: true
+- recovery_position:
+    use_entities: true
+- recovery_position_spinal_injury:
+    use_entities: true
+- CPR:
+    use_entities: true
+- CPR_adult:
+    use_entities: true
+- CPR_child:
+    use_entities: true
+- CPR_infant:
+    use_entities: true
+- give_breaths:
+    use_entities: true
+- manage_injured:
+    use_entities: true
+- head_to_toe_examination:
+    use_entities: true
+- pulse_check:
+    use_entities: true
+- drowning:
+    use_entities: true
+- mild_choking:
+    use_entities: true
+- severe_choking:
+    use_entities: true
+- cardiac_arrest:
+    use_entities: true
+- heart_attack:
+    use_entities: true
+- heart_attack_conscious:
+    use_entities: true
+- heart_attack_unconscious:
+    use_entities: true
+- stroke:
+    use_entities: true
+- fainting:
+    use_entities: true
+- external_bleeding:
+    use_entities: true
+- internal_bleeding:
+    use_entities: true
+- open_wound:
+    use_entities: true
+- amputation:
+    use_entities: true
+- punctured_wound:
+    use_entities: true
+- crush_injury:
+    use_entities: true
+- burn:
+    use_entities: true
+- broken_bone:
+    use_entities: true
+- dislocation:
+    use_entities: true
+- strain:
+    use_entities: true
+- sprain:
+    use_entities: true
+- head_injury:
+    use_entities: true
+- head_injury_conscious:
+    use_entities: true
+- head_injury_unconscious:
+    use_entities: true
+- spinal_neck_injury:
+    use_entities: true
+- spinal_neck_injury_conscious:
+    use_entities: true
+- spinal_neck_injury_unconscious:
+    use_entities: true
+- abdominal_injury:
+    use_entities: true
+- penetrating_chest_wound:
+    use_entities: true
+- eye_injury:
+    use_entities: true
+- embedded_object_in_eye:
+    use_entities: true
+- penatrating_object_in_eye:
+    use_entities: true
+- anaphylaxis:
+    use_entities: true
+- angina:
+    use_entities: true
+- nose_bleed:
+    use_entities: true
+- bruise:
+    use_entities: true
+- shock:
+    use_entities: true
+- blister:
+    use_entities: true
+- taking_casualty_to_hospital:
+    use_entities: true
+- ear_bleeding:
+    use_entities: true
+- hyperventilation:
+    use_entities: true
+- asthma:
+    use_entities: true
+- cuts:
+    use_entities: true
+- abrasion:
+    use_entities: true
+- broken_toe:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  - text: Hi!
+  - text: Good day
+  - text: How are you doing?
+  - text: Hey!
+  - text: Howdy
+  utter_how_mayhelp:
+  - text: What can I do for you?
+  - text: How may I help you?
+  - text: How can I assist you?
+  - text: Is there anything I can do for you
+  utter_goodbye:
+  - text: Bye
+  - text: Good bye and stay healthy!
+  - text: Take care
+  - text: Stay healthy!
+  utter_did_that_help:
+  - text: Did that help you?
+  - text: Was that able to help?
+  - text: I hope I was able to help
+  utter_great:
+  - text: Great! Carry on
+  - text: Great! Stay safe
+  - text: Glad I was able to help
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request. Do you want to continue?
+  - text: I can't handle that request, we can start all over again
+  - text: Let us begin again
+  utter_iamabot:
+  - text: I am a first-aid bot for road accidents, powered by Rasa.
+  - text: My name is Fara, I am a first-aid bot for road accidents.
+  - text: Call me Fara, I am a first aid bot.
+  utter_assess_accident:
+  - text: |-
+      1. Before approaching the patient look and listen for any signs of danger. Once you have carefully checked to make sure that the area is safe, you can approach the patient and check for a response. Make sure that you do not become a patient too, you are no help to the patient if you become injured yourself. 
+      2. Start by identifying seriously injured persons, such as, patients that are bleeding from head, nose, legs, and other organs. In general, victims that can talk or scream are in a better condition than those who cannot breathe or scream. 
+      3. Check for consciousness of patients. Check the pulse to see whether the person is breathing. Keep talking to the person to keep him conscious until medical help arrives. You can ask questions, such as a name or squeeze shoulders of the patient If the does not reply, he is in an unconscious state.
+      4.	If you cannot make an area safe, call 112 for emergency help before performing first aid. Stand clear until the emergency services have secured the scene.
+  utter_handle_emergency:
+  - buttons:
+    - payload: /handle_emergency_conscious
+      title: conscious
+    - payload: /handle_emergency_unconscious
+      title: unconscious
+    text: Is the patient conscious or unconscious?
+  utter_handle_emergency_conscious:
+  - text: |
+      To handle emergency;
+      1.	Ensure that the area is safe for you, the bystanders and the patient
+      2.	Check for response from the patient; ask for a name or squeeze shoulders of the patient
+      3.	If there is a response, leave the patient in the position you found him and monitor his breathing and response.
+      4.	Reassure the patient.
+      5.	Manage severe bleedings and other injuries.
+      6.	Dial emergency number 112 and ask for help.
+  utter_handle_emergency_unconscious:
+  - text: |-
+      To handle emergency;
+      1.	Ensure that the area is safe for you, the bystanders and the patient
+      2.	Check for response from the patient; ask for a name or squeeze shoulders of the patient
+      3.	If there is no response, make the patient comfortable and monitor his breathing and response. Also manage severe bleedings and other injuries. 
+      4.	Dial emergency number (112) and ask for help.
+      5.	If the patient is an adult or child above 1 year old, open the patient’s mouth and check for foreign material. If there is foreign material, gently roll the patient to their side and clear the airway. If there is no foreign material, leave the patient on the ground in the position found and open the airway by tilting the head back with a chin lift.
+      6.	If the patient is under 1 year old lay the infant on a firm surface and clear their mouth of the blockage with your little finger.
+      7.	Check if the patient is breathing normally. If so, place in recovery position and ensure that an ambulance has been called. 
+      8.	Continue to check the patient for normal breathing until medical aid arrives.
+      9.	If the patient stops breathing, roll them onto their back and start CPR.
+      10. Start CPR of 30 chest compressions and 2 breaths. Continue CPR until help arrives or the patient starts breathing or you are physically unable to continue.
+      11. If, during CPR, the patient starts breathing but is still unconscious, turn them back into the recovery position. Continue to check the patient. Be ready to turn the patient onto their back again and restart CPR if breathing stops.
+    image:  "https://res.cloudinary.com/c-stephd/image/upload/v1625696091/FARA%20bot/emergency_i92n7b.jpg"
+  utter_recovery_position:
+  - text: |
+      To put the patient in recovery position;
+      1.	Kneel beside the casualty. Remove the patient’s glasses and any bulky objects, such as mobile phones or large bunches of keys, from their pockets. Do not search pockets for small items.
+      2.	Make sure that both of the casualty’s legs are straight. Place the arm that is closest to you at right angles to the casualty’s body, with the elbow bent and the palm facing upward.
+      3.	Bring the arm that is farthest from you across the casualty’s chest, and hold the back of the hand against the cheek closest to you. With your other hand, grasp the far leg just above their knee and pull it up, keeping the foot flat on the ground.
+      4.	Keeping the casualty’s hand pressed against their cheek, pull on the far leg and roll the casualty toward you and onto their side.
+      5.	If the patient is an infant under 1 year old, lie the infant face down on your forearm and support the infant’s head with your hand.
+    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696121/FARA%20bot/Recovery_position_x9c19j.png"
+  utter_recovery_position_spinal_injury:
+  - text: |-
+      To put the patient in recovery position;
+      1.	If you suspect a spinal injury and need to place the casualty in the recovery position, try to keep the spine straight. If you are alone, use the technique shown in recovery position.
+      2.	If you have a helper, one of you should steady the head while the other turns the casualty (right).
+      3.	With three people, one person should steady the head while another turns the casualty. The third person should keep the casualty’s back straight during the maneuver.
+  utter_CPR:
+  - buttons:
+    - payload: /CPR_adult
+      title: adult
+    - payload: /CPR_child
+      title: child
+    - payload: /CPR_infant
+      title: infant
+    text: Do you want to perform CPR for an adult, a child (above one years old) or an infant (below one years old)
+  utter_CPR_adult:
+  - text: |-
+      To perform CPR;
+      1.	Ensure that the patient is on a firm surface. Place the patient on their back and kneel beside the patient’s chest. Locate the lower half of the breastbone in the center of the chest.
+      2.	Place the heel of one hand on the lower half of the breastbone and the heel of the other hand on top of the first hand. Interlock the fingers of your hands and raise your fingers.
+      3.	Position yourself vertically above the patient’s chest. Ensure that your arms are straight then press down on the patient’s chest until it is compressed by about one-third.
+      4.	Release the pressure. Pressing down and releasing is 1 compression. Give 30 compressions followed by 2 breaths. Compressions should be done at a rate of two compressions per second. 
+      5.	At least 5 sets of 30 compressions and 2 breaths should be achieved in two minutes and interruptions should be minimized as much as possible.
+      6.	CPR should be continued until the patient starts breathing normally, you are physically unable to continue, more qualified help arrives and takes over or a healthcare professional directs that CPR be ceased.
+      7.	Keep in mind that any attempt at resuscitation is better than no attempt at all. Giving only compressions is better than nothing at all. 
+    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696060/FARA%20bot/chest_compressoion_nxlgsk.jpg"
+  utter_CPR_child:
+  - text: |-
+      To perform CPR;
+      1.	Open the child's airway by placing one hand on the child’s forehead and gently tilting their head back and lifting the chin. Remove any visible obstructions from the mouth and nose.
+      2.	Pinch their nose. Seal your mouth over their mouth and blow steadily and firmly into their mouth, checking that their chest rises. Give five initial rescue breaths
+      3.	Place the heel of one hand on the centre of their chest and push down by 5cm (about two inches), which is approximately one-third of the chest diameter. The quality (depth) of chest compressions is very important. Use two hands if you can't achieve a depth of 5cm using one hand
+      4.	After every 30 chest compressions at a rate of 100 to 120 per minute, give two breaths
+      5.	Continue with cycles of 30 chest compressions and two rescue breaths until they begin to recover or emergency help arrives
+  utter_CPR_infant:
+  - text: |-
+      To perform CPR;
+      1.	Open the infant's airway by placing one hand on their forehead and gently tilting the head back and lifting the chin. Remove any visible obstructions from the mouth and nose
+      2.	Place your mouth over the mouth and nose of the infant and blow steadily and firmly into their mouth, checking that their chest rises. Give five initial rescue breaths
+      3.	Place two fingers in the middle of the chest and push down by 4cm (about 1.5 inches), which is approximately one-third of the chest diameter. The quality (depth) of chest compressions is very important. Use the heel of one hand if you can't achieve a depth of 4cm using the tips of two fingers.
+      4.	After 30 chest compressions at a rate of 100 to 120 per minute, give two rescue breaths.
+      5.	Continue with cycles of 30 chest compressions and two rescue breaths until they begin to recover or emergency help arrive.
+  utter_give_breaths:
+  - text: |-
+      1.	Open the airway using the head tilt and chin lift and then place one hand on the patient’s forehead or top of their head. Use the other hand on the chin to tilt their head (not the neck) backwards.  Be sure to avoid pressure on the neck and soft tissue under the skin.
+      2.	With the head tilted backwards, pinch the soft part of the nose closed with your index finger and thumb, or  seal the nose with your cheek.
+      3.	Open the patient’s mouth by placing your thumb over the chin below the lip and supporting the tip of jaw with the knuckle of middle finger. Place your index finger along jaw line. The chin is held up by your thumb and fingers in order to open the mouth and keep the airway clear.
+      4.	Take a breath and place your lips over the patient’s mouth, ensuring a good seal. Blow steadily for about 1 second, watching for the chest to rise. Turn your mouth away from the patient’s mouth and watch for chest to fall, and listen and feel for signs of air being expelled. Maintain head tilt and chin lift. Take another breath and repeat the sequence which is now 2 breaths.
+      5.	If the chest does not rise, recheck the mouth and remove any obstructions. Make sure the head is tilted and chin lifted, and ensure there is a good seal around the mouth and nose.
+  utter_manage_injured:
+  - text: |-
+      There are three aspects to this:
+      1.	First, find out what is wrong with the casualty
+      2.	Second, treat conditions found in order of severity—life-threatening conditions first
+      3.	Third, arrange for the next step of a casualty’s care. You will need to decide what type of care a casualty needs. You may need to call for emergency help, suggest the casualty seeks medical advice, or allow him to go home, accompanied if you think it is necessary.
+      4.	Other people at the incident can help you with this. Ask one of them to call 911 for emergency help while you attend a casualty. Alternatively, they may be able to look after less seriously injured casualties, or retrieve first aid equipment.
+  utter_head_to_toe_examination:
+  - text: |-
+      1.	Assess breathing. Check the rate (fast or slow), depth (shallow or deep), and nature (is it easy or difficult, noisy or quiet). Check the pulse. Assess the rate (fast or slow), rhythm (regular or irregular) and strength (strong or weak).
+      2.	Start the physical examination at the casualty's head. Run your hands carefully over the scalp to feel for bleeding, swelling, or depression, which may indicate a fracture. Be careful not to move the casualty if you suspect that she may have injured her neck.
+      3.	Speak clearly to the casualty in both ears to find out if she responds or if she can hear. Look for clear fluid or watery blood coming from either ear. These discharges may be signs of a serious head injury.
+      4.	Examine both eyes. Note whether they are open. Check the size of the pupils (the black area). If the pupils are not the same size it may indicate head injury. Look for any foreign object, or blood in the whites of the eyes.
+      5.	Check the nose for discharges as you did for the ears. Look for clear fluid or watery blood (or a mixture of both) coming from either nostril. Soot around the nostrils or singed nasal hairs might indicate serious airway burns.
+      6.	Look in the mouth for anything that might obstruct the airway. If the casualty has dentures that are intact and fit firmly, leave them. Look for mouth wounds or burns and check for irregularity in the line of the teeth.
+      7.	Look at the skin. Note the colour and temperature: is it pale, flushed, or gray-blue (cyanosis); is it hot or cold, dry or damp? Pale, cold, sweaty (clammy) skin suggests shock; a flushed, hot face suggests fever or heatstroke. A blue tinge indicates lack of oxygen; look for this in the lips, ears, and face.
+      8.	Loosen clothing around the neck, and look for signs such as a medical warning necklace or a hole (stoma) in the windpipe. Run your fingers gently along the spine from the base of the skull down as far as possible without moving the casualty; check for irregularity, swelling, tenderness, or deformity.
+      9.	Look at the chest. Ask the casualty to breathe deeply, and note whether the chest expands evenly, easily, and equally on both sides. Feel the rib cage to check for deformity, irregularity, or tenderness. Ask the casualty if she is aware of grating sensations when breathing, and listen for unusual sounds. Note whether breathing causes any pain. Look for any external injuries, such as bleeding or stab wounds.
+      10. Feel along the collarbones, shoulders, upper arms, elbows, hands, and fingers for any swelling, tenderness, or deformity. Check the movements of the elbows, wrists, and fingers by asking the casualty to bend and straighten each joint.
+      11. Check that the casualty has no abnormal sensations in the arms or fingers. If the fingertips are pale or gray-blue there may be a problem with blood circulation. Look out for needle marks on the forearms, or a medical warning bracelet.
+      12. If there is any impairment in movement or loss of sensation in the limbs, do not move the casualty to examine the spine, since these signs suggest spinal injury. Otherwise, gently pass your hand under the hollow of the back and check for swelling and tenderness.
+      13. Gently feel the casualty’s abdomen to detect any evidence of bleeding, and to identify any rigidity or tenderness of the abdomen’s muscular wall, which could be a sign of internal bleeding. Compare one side of the abdomen with the other. Note any bruising on the abdomen or pelvis.
+      14. Feel both sides of the hips, and examine the pelvis for signs of fracture. Check clothing for any evidence of incontinence, which suggests spinal or bladder injury, or bleeding from orifices, which suggests pelvic fracture.
+      15. Check the legs. Look and feel for bleeding, swelling, deformity, or tenderness. Ask the casualty to raise each leg in turn, and to move her ankles and knees.
+      16. Check the movement and feeling in the toes. Check that the victim has no abnormal sensations in her feet or toes. Compare the feet. Look at the skin colour: gray-blue skin may indicate a circulatory disorder or an injury due to cold.
+  utter_pulse_check:
+  - text: |-
+      1.	The pulse may be felt at the wrist (radial pulse), or if this is not possible, the neck (carotid pulse).
+      2.	For radial pulse, Place the pads of two or three fingers below the wrist creases at the base of the thumb.
+      3.	For carotid pulse, Place the pads of two fingers in the hollow between the large neck muscle and the windpipe.
+      4.	In babies, the pulse in the upper arm (brachial pulse) is easier to find. Place the pads of two fingers on the inner side of an infant’s upper arm.
+      5.	When checking a pulse, use your fingers (not your thumb) and press lightly against the skin. Record the following points; Rate (number of beats per minute), Strength (strong or weak), Rhythm (regular or irregular).
+    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696109/FARA%20bot/pulse_check2_ct5ntu.png"
+  utter_drowning:
+  - text: |-
+      1.	The pulse may be felt at the wrist (radial pulse), or if this is not possible, the neck (carotid pulse).
+      2.	For radial pulse, Place the pads of two or three fingers below the wrist creases at the base of the thumb.
+      3.	For carotid pulse, Place the pads of two fingers in the hollow between the large neck muscle and the windpipe.
+      4.	In babies, the pulse in the upper arm (brachial pulse) is easier to find. Place the pads of two fingers on the inner side of an infant’s upper arm.
+      5.	When checking a pulse, use your fingers (not your thumb) and press lightly against the skin. Record the following points; Rate (number of beats per minute), Strength (strong or weak), Rhythm (regular or irregular).
+  utter_mild_choking:
+  - text: |-
+      If the airway is only partly blocked, the person will usually be able to speak, cry, cough or breathe. In situations like this, a person will usually be able to clear the blockage themselves.
+      If choking is mild:1.	Encourage the person to cough to try to clear the blockage2.	Ask them to try to spit out the object if it’s in their mouth3.	Don't put your fingers in their mouth to help them because they may accidentally bite you
+      4.	If coughing doesn’t work, start back blows and call 112 for an ambulance.
+       5.	Bend the patient forward and give up to 5 sharp blows on the back between the shoulder blades with the heel of one hand. Check if the blockage has been removed after each blow.
+      6.	If the blockage has not cleared after 5 back blows, give up to 5 chest thrusts by placing one hand in the middle of the patient’s back for support and the heel of the other on the lower half of the sternum. Thrusts should be slower and sharper than CPR compressions. Check if the blockage has been removed after each thrust.
+      7.	If the blockage has not cleared after 5 thrusts, continue alternating 5 back blows with 5 chest thrusts until medical aid arrives.
+      8.	If the patient becomes unconscious, start following the steps for handling emergency before the ambulance arrives.
+   image:  "https://res.cloudinary.com/c-stephd/image/upload/v1625696075/FARA%20bot/choking2_znqtng.jpg"
+ utter_severe_choking:
+  - text: |-
+      If choking is severe, the person won’t be able to speak, cry, cough or breathe, and without help they’ll eventually become unconscious. To help an adult or child over one year old:
+      1.	Stand behind the person and slightly to one side. Support their chest with one hand. Lean the person forward so that the object blocking their airway will come out of their mouth, rather than moving further down.
+      2.	Give up to five sharp blows between the person’s shoulder blades with the heel of your hand (the heel is between the palm of your hand and your wrist).
+      3.	Check if the blockage has cleared.
+      4.	If not, give up to five abdominal thrusts.
+      5.	Abdominal thrusts shouldn't be used on babies under one year old, pregnant women or obese people.
+      To perform abdominal thrusts on a person who is severely choking and isn’t in one of the above groups:
+      6.	Stand behind the person who is choking.
+      7.	Place your arms around their waist and bend them well forward.
+      8.	Clench one fist and place it just above the person's belly button.
+      9. Place your other hand on top of your fist and pull sharply inwards and upwards.
+      10. Repeat this up to five times.
+      11. The aim is to get the obstruction out with each chest thrust, rather than necessarily doing all five.
+      12. If the obstruction doesn't clear after three cycles of back blows and chest thrusts, dial 999 or 112 to ask for an ambulance, and continue until help arrives.
+      13. The person choking should always be seen by a healthcare professional afterwards to check for any injuries or small pieces of the obstruction that remain.
+    image:  "https://res.cloudinary.com/c-stephd/image/upload/v1625697040/FARA%20bot/choking_mlrdwo.jpg"
+  utter_cardiac_arrest:
+  - text: |-
+      1.	Follow the steps for handling emergency and call 112 for an ambulance.
+      2. Start CPR.
+       3. Continue CPR until the patient pushes you away or it is clear that they are breathing normally or responding, or
+        4. until medical aid arrives.
+      5. The most effective treatment for cardiac arrest is using a defibrillator.
+  utter_heart_attack:
+  - buttons:
+    - payload: /heart_attack_conscious
+      title: conscious
+    - payload: /heart_attack_unconscious
+      title: unconscious
+    text: Is the patient conscious or unconscious
+  utter_heart_attack_conscious:
+  - text: |-
+      1.	Follows the steps for handling emergency.
+      2.	Encourage the patient to immediately stop what they are doing and rest. Help the patient to sit or lie down in a comfortable position. Reassure the patient.
+      3.	Loosen any tight clothing. 
+      4.	If the patient has been prescribed medication such as a tablet or mouth spray to treat episodes of chest pain or  discomfort, help them to take this as they have been directed.
+      5.	Ask the patient to describe their symptoms. If any of the symptoms are severe, get worse quickly or have lasted 10 minutes call 112 for an ambulance. Stay on the phone.  Wait for advice from the operator.
+      6.	It is not recommended that you drive the patient to the hospital yourself, as you may need to perform CPR.
+      7.	Stay with the patient until medical aid arrives. Be prepared to give CPR
+  utter_heart_attack_unconscious:
+  - text: |2-
+       1.	Follow the steps for handling emergency.
+      2.	Place the patient in the recovery position and call 112 for an ambulance. Stay on the phone. It is not recommended that you drive the patient to the hospital yourself, as you may need to perform CPR.
+      3.	Stay with the patient until medical aid arrives. Be prepared to give CPR if symptoms worsen. 
+  utter_stroke:
+  - text: |2-
+       1.	Follow the steps for handling emergency then call 112 for an ambulance.
+      2.	Reassure the patient. The patient may not be able to clearly communicate which may cause them extreme anxiety.
+       3.	Help the patient to sit or lie down in a comfortable position. Support the patient’s head and shoulders on pillows. Loosen any tight clothing. Keep the patient warm, with a blanket if necessary.
+      4.	Wipe away any secretions from the patient’s mouth
+  utter_fainting:
+  - text: |-
+      1.	People usually recover from fainting quickly within seconds without any lasting effects.
+      2.	Follow the steps for handling emergency.
+      3.	Lie the patients down on their back with their legs elevated. Loosen any tight clothing and ensure that there is plenty of fresh air.
+      4.	Treat any injury resulting from fall or accident.
+  utter_external_bleeding:
+  - text: |-
+      1.	Follow the steps for handling emergency.
+      2.	Help the patient to lie down. Remove or cut the patient’s clothing to expose the wound.
+      3.	Apply firm, direct pressure on or around the bleeding wound. Use a pad or hands. Squeeze the wound edges together if possible.
+      4.	Apply a pad over the wound if not already in place. Secure the pad by bandaging over it. Ensure the pad remains over the wound.
+      5.	If bleeding is still not controlled, leave the initial pad in place and apply a second pad and secure it with a bandage. If bleeding continues through the second pad, replace the second pad leaving the first pad in place, and rebandage. 10 If the bleeding is severe or persistent, consider applying a constrictive bandage (a commercially available tourniquet).
+      6.	A tourniquet is a tight band used to apply pressure and limit blood flow.
+      7.	Do not give the severely bleeding patient any food or drink, and call 112 for an ambulance.
+      8.	Check every 15 minutes that the bandages are not too tight and that there is circulation below the wound.
+      9.	Continue to check the patient’s breathing.
+  utter_internal_bleeding:
+  - text: |-
+      1.	Follow the steps for handling emergency
+      2.	Call 112 for an ambulance.
+      3.	Lay the patient down with their knees bent or legs raised, a pillow may be used under the head to increase comfort. If the patient is coughing up frothy blood, help the patient to sit down in a comfortable position (this is normally half sitting up).
+      4.	Reassure the patient. Loosen any tight clothing.
+      5.	DO NOT give the patient anything to eat or drink.
+  utter_open_wound:
+  - text: |-
+      1.	Check if you have the required first aid equipment; gloves, goggles, saline or clean water, sterile gauze and a garbage bin.
+      2.	Wash your hands, put on gloves and set up the equipment. Soak the sterile gauze with saline or water.
+      3.	Clean the wound thoroughly. Swab from inner to outer edge, throwing away each piece of gauze after one swab. Do not dab at the wound.
+      4.	Visually check the wound for any infection.
+      5.	Apply a soft, dry dressing and fix in position.
+      6.	Dispose of used materials, clean work surfaces and wash hands.
+  utter_amputation:
+  - text: |-
+      1.	Follow the steps for handling emergency.
+      2.	Call 112 for an ambulance.
+      3.	Apply direct pressure to the wound. Apply a sterile dressing and bandage.
+      4.	For the amputated part, do not wash or soak the amputated part in water or any other liquid.
+      5.	Wrap the part in gauze or material and place in a watertight container, such as a sealed watertight plastic bag. Place the sealed container in cold water that has had ice (if available) added to it. The severed part should not be in direct contact with the ice.
+      6.	Send the part to the hospital with the patient.
+    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696049/FARA%20bot/amputation_kb2irm.jpg"
+  utter_punctured_wound:
+  - text: |-
+      1.	Do not try to remove the object as it may be plugging the wound and restricting bleeding. Removing it may result in severe bleeding or may damage deep structures. Do not put any pressure on the object.
+      2.	Do not try to cut the end of the object unless its size makes it unmanageable.
+      3.	Control bleeding by applying pressure to the surrounding areas but not on the object.
+      4.	Place padding around the object or place a ring pad over the object and a bandage over the padding.
+      5.	If the length of the object causes it to protrude outside the pad, take care to bandage only each side of the object.
+      6.	Rest the injured part in a comfortable position.
+      7.	Seek medical aid and consider calling 112 for an ambulance depending on the depth of the wound and the severity of any bleeding.
+  utter_crush_injury:
+  - text: |-
+      1.	Crush injuries are often very serious, because the damage may cause internal bleeding, fractured bones, ruptured organs, impaired blood supply.
+      2.	If the patient is trapped by the object for any length of time, there is the risk of complications such as extensive tissue damage and shock. While complications can take some hours to develop, removing the object as soon as possible minimises the risk to the patient.
+      3.	Follow the steps for handling emergency.
+      4.	Call 112 for an ambulance. Ensure your own safety. If safe, remove the crushing object as soon as possible.
+      5.	Control any bleeding. Manage other injuries. Reassure the patient.
+  utter_burn:
+  - text: |-
+      1.	Do not apply lotions, ointments, fat or ice to a burn.
+      2.	Do not touch the injured areas or burst any blisters.
+      3.	Do not remove anything sticking to the burn. 
+      4.	If the patient is on fire, stop the patient from moving around. Drop the patient to the ground and cover or wrap them in a blanket or similar, if available.
+      5.	Roll the patient along the ground until the flames are extinguished. Manage the burn.
+      6.	If the burn is serious or it involves the airway, call 112 for an ambulance.
+      7.	Follow the steps for handling emergency.
+      8.	As soon as possible hold the burnt area under cooling water for 20 mins.
+      9.	Remove any clothing and jewelry from the burnt area, unless they are stuck to the burn.
+      10.	Cover the burn with a light, loose nonstick dressing, preferably clean, dry non fluffy material like a plastic cling film.
+      11.	Continue to check the patient for shock and treat if necessary.
+      12.	If the burn is larger than a coin piece or deep, seek medical aid.
+  utter_broken_bone:
+  - text: |-
+      1.	Follow the steps for handling emergency.
+      2.	Ask the patient to remain as still as possible. Control any bleeding, cover any wounds and check for other fractures.
+      3.	Immobilize the broken bone by placing a padded splint along the injured limb.
+      4.	Secure the splint by passing the bandages above and below the break to prevent movement. Tie the bandages firmly and away from the injured side.
+      5.	For a leg fracture, immobilize the foot and ankle and support the limb while bandaging.
+      6.	Check that the bandages are not too tight and watch for signs of loss of circulation to the limb every 15 minutes.
+      7.	Seek medical aid.
+      8.	Do not try to force a broken bone back into place.
+    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696054/FARA%20bot/broken_bone_witq23.jpg"
+  utter_dislocation:
+  - text: |-
+      1.	Follow the steps for handling emergency.
+      2.	Rest and support the limb using soft padding and bandages.
+      3.	For a shoulder injury, support the arm as comfortably as possible.
+      4.	For a wrist injury, support the wrist in a sling.
+      5.	Apply a cold pack directly over the injured joint, if possible.
+      6.	Seek medical aid.
+      7.	Check circulation of the limb. If circulation is absent, call 112 for an ambulance.
+      8.	Massage the limb gently to try to restore circulation.
+  utter_strain:
+  - text: |-
+      Follow the steps for handling emergency.
+      Follow RICE:
+      1.	Rest – rest the patient and the injured part
+      2.	Ice – apply an ice pack or cold pack for 15 minutes every 2 hours for 24 hours, then for 15 minutes every 4 hours for up to 24 hours.
+      3.	Compression – apply a compression bandage firmly to extend well beyond the injury
+      4.	Elevation – elevate the injured part.
+      Avoid HARM: Heat,Alcohol, Running or other exercise of the injured area and Massage. 
+      Seek medical aid.
+  utter_sprain:
+  - text: |-
+      Follow the steps for handling emergency.
+      Follow RICE:
+      1.	Rest – rest the patient and the injured part
+      2.	Ice – apply an ice pack or cold pack for 15 minutes every 2 hours for 24 hours, then for 15 minutes every 4 hours for up to 24 hours
+      3.	Compression – apply a compression bandage firmly to extend well beyond the injury
+      4.	Elevation – elevate the injured part.
+      Avoid HARM: Heat,Alcohol, Running or other exercise of the injured area and Massage.
+      Seek medical aid.
+  utter_head_injury:
+  - buttons:
+    - payload: /head_injury_conscious
+      title: conscious
+    - payload: /head_injury_unconscious
+      title: unconscious
+    text: Is the patient conscious or unconscious
+  utter_head_injury_conscious:
+  - text: |-
+      If the patient is conscious;
+      1.	Follow the steps for handling emergency.
+      2.	If no spinal injury is suspected, place the patient in a position of comfort (usually lying down) with their head and shoulders slightly raised.
+      3.	Control any bleeding with direct pressure at the point of bleeding. If you suspect the skull is fractured, use gentle pressure around the wound.
+      4.	If blood or fluid comes from the ear, secure a sterile dressing lightly over the ear. Lie the patient on their injured side, if possible, to allow the fluid to drain.
+      5.	Seek medical aid.
+  utter_head_injury_unconscious:
+  - text: |-
+      If the patient is unconscious;
+      1.	Follow the steps for handling emergency.
+      2.	If the patient is unconscious and a neck or spinal injury is suspected, place the patient in the recovery position, carefully supporting the patient’s head and neck, and avoid twisting or bending during movement.
+      3.	Ensure the patient’s airway is clear and open. Keep the patient’s airway open by lifting their chin. Do not force if  the face is badly injured.
+      4.	Call 112 for an ambulance.
+  utter_spinal_neck_injury:
+  - buttons:
+    - payload: /spinal_neck_injury_conscious
+      title: conscious
+    - payload: /spinal_neck_injury_unconscious
+      title: unconscious
+    text: Is the patient conscious or unconscious
+  utter_spinal_neck_injury_conscious:
+  - text: |-
+      If the patient is conscious
+      1.	Follow the steps for handling emergency.
+      2.	Call 112 for an ambulance.
+      3.	Keep the patient in the position found. Only move if in danger. Reassure the patient. Ask them not to move.
+      4.	Loosen any tight clothing. Hold the head and neck stead to prevent twisting or bending of the spine.
+  utter_spinal_neck_injury_unconscious:
+  - text: |-
+      1.	If the patient is unconscious as a result of head injury, you should always suspect a spinal injury.
+      2.	Do not move a patient with a suspected spinal injury unless they are in danger. Movement may cause further injury.
+      3.	Twisting, compressing or pending an injured spine may increase the damage. If the patient must be moved, take extreme care to keep the spine straight and avoid twisting or bending. Where the neck is involved, support the head and neck with your hands.
+      4.	Do not apply cervical collar.
+      If the patient is unconscious
+      5.	Follow the steps for handling emergency.
+      6.	Call 112 for an ambulance.
+      7.	Place the patient in the recovery position. Carefully support their head and neck, and avoid twisting or bending during movement.
+      8.	Ensure the patient’s airway is clear and open.
+      9.	Hold the patient’s head and neck steady to prevent twisting or bending of the spine.
+  utter_abdominal_injury:
+  - text: |-
+      Do not apply direct pressure to the wound.
+      For a closed wound;
+      1.	Follow the steps for handling emergency.
+      2.	Check for signs of internal bleeding.
+      3.	If the abdominal pain continues, seek medical help immediately.
+      For an open wound;
+      1.	Do not try to push organs back into the abdomen.
+      2.	Follow the steps for handling emergency.
+      3.	Call 112 for an ambulance.
+      4.	Place the patient on their back with knees slightly raised and supported. A pillow might be used under the head to increase comfort.
+      5.	Loosen any tight clothing.
+      6.	Cover protruding organs with aluminum foil or plastic food wrap, or a large, nonstick, sterile dressing soaked in sterile saline or clean water if saline is not available.
+      7.	Loosely secure the dressing with a broad bandage.
+  utter_penetrating_chest_wound:
+  - text: |-
+      If the patient is unconscious;
+      1.	Follow the steps for handling emergency.
+      2.	Call 112 for an ambulance.
+      3.	Place the patient in the recovery position, with the injured side down.
+      If the patient is conscious;
+      1.	Follow the steps for handling emergency
+      2.	Call 112 for an ambulance.
+      3.	Help the patient to sit down in a comfortable position – this is normally half sitting, leaning to the injured side.
+      4.	Stop any bleeding by applying pressure to the wound at the point of bleeding if possible then cover the wound with a sterile or clean dressing and secure loosely with tape.
+      5.	Continue to check the patient’s breathing. If the patient suddenly deteriorates following the application of any dressing to the chest, the dressing must be removed immediately.
+      6.	Check for an exit wound, especially if injury caused by violent trauma (eg gunshot wound)
+  utter_eye_injury:
+  - text: |-
+      1.	DO NOT touch the eye or contact lens. DO NOT allow the patient to rub the eye.
+      2.	DO NOT try to remove any object that is embedded in or penetrating from the eye.
+      3.	DO NOT persist in examining the Eye if the injury is severe.
+      4.	DO NOT apply pressure when bandaging the eye.
+      5.	Act with extreme urgency (within seconds) if it is a heat or chemical burn.
+      6.	Follow the steps for handling emergency.
+      7.	Wash hands thoroughly and put on disposable gloves.
+      8.	Do not try to remove the object that is embedded in or protruding from the eye.
+      9.	Cover the injured eye only with one or more sterile pads avoiding any protruding object.
+      10.	DO NOT put direct pressure on the eyeball.
+      11.	Help the patient to lie down in a comfortable position from the back
+      12.	Ask the patient to try not to move their eyes
+      13.	Seek medical aid. 
+  utter_embedded_object_in_eye:
+  - text: |-
+      1.	DO NOT touch the eye or contact lens.
+      2.	DO NOT allow the patient to rub the eye.
+      3.	DO NOT try to remove any object that is embedded in or penetrating from the eye.
+      4.	DO NOT persist in examining the eye if the injury is severe.
+      5.	DO NOT apply pressure when bandaging the eye.
+      6.	Act with extreme urgency (within seconds) if it is a heat or chemical burn.
+      7.	Follow the steps for handling emergency.
+      8.	Cover the injured eye with an eye pad or  clean dressing.
+      9.	Seek medical aid.
+  utter_penatrating_object_in_eye:
+  - text: |-
+      1.	Follow the steps for handling emergency.
+      2.	Call 112 for an ambulance.
+      3.	Help the patient to lie down.
+      4.	DO NOT try to remove the penetrating object.
+      5.	Cover the injured eye by placing thick pads around or above and below the eye, or cover the injured eye with a paper cup.
+      6.	Bandage the pads place, making sure there is no pressure on the eyelids.
+      7.	Ask the patient to try not to move their eyes.
+      8.	DO NOT give the patient anything to eat or drink.
+  utter_anaphylaxis:
+  - text: |-
+      1.	Do not sit or stand them up, as this could be potentially fatal.
+      2.	The primary treatment is adrenaline injection and if the patient has their own syringe device i.e. Emerade Auto-injector 500mg, 300mg & 150mg. Epi-Pen 300mg & 150mg.
+      3.	Encourage them to use it or give the injection to the patient yourself ASAP.
+      4.	Lay the patient in a comfortable position.
+      5.	If the patient has airway or breathing problems they may prefer to sit (this will help their breathing).
+      6.	If the patient feels faint however – do not sit them up. Lay them down flat and raise their legs.
+      7.	Dial 112 for an ambulance.
+      8.	If patient becomes unconscious place in recovery position (semi prone which will prevent tongue from blocking the airway) and ensure that the airway stays clear and that the patient is breathing
+  utter_angina:
+  - text: |-
+      1.	Stop what they are doing and sit down (half sitting position is good).
+      2.	See if they have their own medication (GTN spray or tablets) and ask them to use it.
+      3.	Reduce any causes of stress or anxiety.
+      4.	If the pain does not go away dial 112 for an ambulance.
+  utter_nose_bleed:
+  - text: |-
+      1.	If the patient is feeling faint, sit them down, advise them to tilt head forward, allowing blood to drain from the nostrils.
+      2.	Ask patient to breath through their mouth.
+      3.	With a finger and thumb show them how to pinch the lower fleshy soft end of the nose for at least 10 minutes (it is useless to put pressure on the root of the nose or the nose bones).
+      4.	If available a cold flannel or compress around the nose is helpful as the cold helps the blood vessels to constrict (close down) and stop bleeding.
+      5.	Advise the patient if possible, not to speak, swallow, cough or spit.
+      6.	Give patient a cloth or tissue to mop up any blood.
+      7.	After 10 minutes ask patient to release the pressure. If bleeding has not stopped reapply pressure.
+      8.	If bleeding has not stopped after 30 minutes, or the patient is taking ‘anti-coagulant' drugs i.e. Warfarin, take them to hospital.
+    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696098/FARA%20bot/nosebleedfirstaid_lau0fx.jpg"
+  utter_bruise:
+  - text: |-
+      1.	Rest the bruised area, if possible.
+      2.	Ice the bruise with an ice pack wrapped in a towel. Leave it in place for 10 to 20 minutes. Repeat several times a day for a day or two as needed.
+      3.	Compress the bruised area if it is swelling, using an elastic bandage. Don't make it too tight.
+      4.	Elevate the injured area.
+      5.	If the skin isn't broken, a bandage is not needed. Consider the use of an over-the-counter pain reliever if needed.
+  utter_shock:
+  - text: |-
+      1.	Dial 112 as soon as possible and ask for an ambulance.
+      2.	Treat any obvious injuries.
+      3.	Lie the person down if their injuries allow you to and, if possible, raise and support their legs
+      4.	Use a coat or blanket to keep them warm.
+      5.	Don't give them anything to eat or drink.
+      6.	Give them lots of comfort and reassurance
+      7.	Monitor the person – if they stop breathing, start cpr and re-alert the emergency services
+      8.	Follow the steps for handling emergencies.
+  utter_blister:
+  - text: |-
+      1.	Wash your hands and sterilize a needle with alcohol.
+      2.	Make small punctures at the edge of the blister. Gently push the fluid out.
+      3.	Apply antibiotic ointment and bandage it.
+      4.	If possible, take steps to protect the area from further rubbing or pressure.
+      If the blister broke open on its own:
+      5.	Gently wash with clean water only.
+      6.	Smooth the flap of broken skin over the newly exposed skin, unless it's dirty, torn, or pus has gathered under it.
+      7.	Apply petroleum jelly and bandage it.
+      8.	Change the bandage any time it gets wet. Take it off when you go to bed so the area can dry.
+  utter_taking_casualty_to_hospital:
+  - text: |-
+      1.	Make sure that the patient should be carried on firm board of stretcher, so that the spine remains in stable.
+      2.	Ensure while shifting the patients back, neck and airway need to be protected from further injury.
+      3.	If the patient is unconscious, gently place cloth or towel under the neck so that the neck does not sag against ground.
+      4.	During transportation keep a close watch on whether the patient’s airway is clear, whether the patient is breathing and whether you can feel the pulse in the patient
+  utter_ear_bleeding:
+  - text: |-
+      The Bleeding from ears mean either injury to the ear alone or serious head injury.
+      Avoid putting anything in the ears to stop bleeding as this could further damage the eardrum. Get the patients to lie down with the injured ear facing into down.
+  utter_hyperventilation:
+  - text: |-
+      When speaking to the casualty, be firm, but kind and reassuring.
+      If possible, lead the casualty away to a quiet place where she may be able to regain control of her breathing more easily and quickly.
+      If this is not possible, ask any bystanders to leave. Encourage the casualty to seek medical advice on preventing and controlling panic attacks in the future.
+  utter_asthma:
+  - text: |-
+      1.	Keep calm and reassure the casualty. Get the patient to take the usual dose of inhaler. Ask the patient to breathe slowly and deeply.
+      2.	Do not lie the patient down but sit the patient down in the most comfortable position.
+      3.	A mild attack should ease in a few minutes. If it does not, ask the casualty to take another dose of the inhaler.
+      4.	Call 112 for emergency help if the attack is severe and any of the following occur: the inhaler has no effect; the casualty is getting worse; breathlessness makes talking hard; she becomes exhausted.
+      5.	Help the casualty use the inhaler as required. Monitor vital signs—level of response, breathing, and pulse until help arrives.
+  utter_cuts:
+  - text: |-
+      Wash the cut properly to prevent infection and stop the bleeding byapplying pressure for 1-2minutes until bleeding stops.
+      Apply Petroleum Jelly to make sure that the wound is moist for quick healing. Finallycover the cut with a sterile bandage.
+      Pain relievers such as acetaminophen can be applied.
+  utter_abrasion:
+  - text: |-
+      1.  Begin with washed hands.Gently clean the area with cool to lukewarm water and mild soap. Remove dirt or other particles from the wound usingsterilized tweezers.
+      2.  For a mild scrape that’s not bleeding, leave the wound uncovered.If the wound is bleeding, use a clean cloth or bandage,and apply gentle pressure to the area to stop any bleeding.
+      3.  Cover a wound that bled with a thin layer of topical antibiotic ointment, like Bacitracin, or a sterile moisture barrier ointment, like Aquaphor. Cover it with a clean bandage or gauze.
+      4.  Gently clean the wound and change the ointment and bandage once per day.
+      5.  Watch the area for signs of infection, like pain or redness and swelling. See your doctor if you suspect infection.
+  utter_broken_toe:
+  - text: |-
+      1. To help decrease pain and swelling in a broken toe, elevate the foot,ice the injury, and stay off the foot.
+      2. Depending on the severity of the fracture, the toe may need to be put back into place (reduced), andsome compound toe fractures may require surgery.
+      3. Most broken toes heal without complications in six weeks.
+actions: []
+forms: {}
+e2e_actions: []

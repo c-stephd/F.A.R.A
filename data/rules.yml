@@ -1,0 +1,190 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Go to recovery position handle emeregency unconscious
+  steps:
+  - intent: handle_emergency_unconscious
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+  
+
+- rule: Handling emergency mild choking
+  steps:
+  - intent: mild_choking
+  - action: utter_mild_choking
+  - action: utter_handle_emergency
+
+- rule: Handling emergency cardiac arrest
+  steps:
+  - intent: cardiac_arrest
+  - action: utter_cardiac_arrest
+  - action: utter_CPR
+  - action: utter_handle_emergency
+  
+- rule: Go to recovery position heart attack unconscious
+  steps:
+  - intent: heart_attack_unconscious
+  - action: utter_heart_attack_unconscious
+  - action: utter_recovery_position
+  - action: utter_handle_emergency
+
+- rule: Handling emergency heart attack conscious
+  steps:
+  - intent: heart_attack_conscious
+  - action: utter_heart_attack_conscious
+  - action: utter_handle_emergency
+  
+- rule: Handling emergency stroke
+  steps:
+  - intent: stroke
+  - action: utter_stroke
+  - action: utter_handle_emergency
+  
+
+- rule: Handling emergency fainting
+  steps:
+  - intent: fainting
+  - action: utter_fainting
+  - action: utter_handle_emergency 
+  
+
+- rule: Handling emergency external bleeding
+  steps:
+  - intent: external_bleeding
+  - action: utter_external_bleeding
+  - action: utter_handle_emergency
+  
+
+- rule: Handling emergency internal bleeding
+  steps:
+  - intent: internal_bleeding
+  - action: utter_internal_bleeding
+  - action: utter_handle_emergency
+   
+
+- rule: Handling emergency amputation
+  steps:
+  - intent: amputation
+  - action: utter_amputation
+  - action: utter_handle_emergency 
+  
+
+- rule: Handling emergency crush injury
+  steps:
+  - intent: crush_injury
+  - action: utter_crush_injury
+  - action: utter_handle_emergency
+   
+
+- rule: Handling emergency burn
+  steps:
+  - intent: burn
+  - action: utter_burn
+  - action: utter_handle_emergency
+    
+
+- rule: Handling emergency broken bone
+  steps:
+  - intent: broken_bone
+  - action: utter_broken_bone
+  - action: utter_handle_emergency
+
+- rule: Handling emergency dislocation
+  steps:
+  - intent: dislocation
+  - action: utter_dislocation
+  - action: utter_handle_emergency
+
+- rule: Handling emergency strain
+  steps:
+  - intent: strain
+  - action: utter_strain
+  - action: utter_handle_emergency
+
+- rule: Handling emergency sprain
+  steps:
+  - intent: sprain
+  - action: utter_sprain
+  - action: utter_handle_emergency
+
+- rule: Go to recovery position head injury unconscious
+  steps:
+  - intent: head_injury_unconscious
+  - action: utter_head_injury_unconscious
+  - action: utter_handle_emergency_unconscious
+
+- rule: Handling emergency head injury conscious
+  steps:
+  - intent: head_injury_conscious
+  - action: utter_head_injury_conscious
+  - action: utter_handle_emergency
+
+- rule: Go to recovery position spinal neck injury unconscious
+  steps:
+  - intent: spinal_neck_injury_unconscious
+  - action: utter_spinal_neck_injury_unconscious
+  - action: utter_recovery_position_spinal_injury
+  - action: utter_handle_emergency_unconscious
+  
+
+- rule: Handling emergency spinal neck injury conscious
+  steps:
+  - intent: spinal_neck_injury_conscious
+  - action: utter_spinal_neck_injury_conscious
+  - action: utter_handle_emergency
+  
+
+- rule: Handling emergency abdominal injury
+  steps:
+  - intent: abdominal_injury
+  - action: utter_handle_emergency
+  - action: utter_abdominal_injury
+  
+
+- rule: Handling emergency penetrating chest wound
+  steps:
+  - intent: penetrating_chest_wound
+  - action: utter_penetrating_chest_wound
+  - action: utter_handle_emergency
+
+- rule: Handling emergency eye injury 
+  steps:
+  - intent: eye_injury 
+  - action: utter_eye_injury 
+  - action: utter_handle_emergency
+
+- rule: Handling emergency embedded object in eye 
+  steps:
+  - intent: embedded_object_in_eye 
+  - action: utter_embedded_object_in_eye
+  - action: utter_handle_emergency
+
+- rule: Handling emergency penatrating object in eye 
+  steps:
+  - intent: penatrating_object_in_eye
+  - action: utter_penatrating_object_in_eye
+  - action: utter_handle_emergency
+
+- rule: Go to recovery position anaphylaxis
+  steps:
+  - intent: anaphylaxis
+  - action: utter_anaphylaxis
+  - action: utter_recovery_position
+ 
+
+- rule: Handling emergency shock
+  steps:
+  - intent: shock
+  - action: utter_shock
+  - action: utter_handle_emergency
