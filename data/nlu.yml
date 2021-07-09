@@ -12,6 +12,12 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - hi again
+    - HI
+    - SUP
+    - Hello
+    - hiiii
+    - hi?
 - intent: goodbye
   examples: |
     - good afternoon
@@ -29,6 +35,9 @@ nlu:
     - thank you
     - I am grateful
     - Thanks for trusting me
+    - yes thanks
+    - okay
+    - that was helpful thanks
 - intent: affirm
   examples: |
     - yes
@@ -38,6 +47,7 @@ nlu:
     - that sounds good
     - correct
     - yes you were
+    - i am fine
 - intent: deny
   examples: |
     - no
@@ -48,6 +58,7 @@ nlu:
     - no way
     - not really
     - it did not help
+    - your werent
 - intent: out_of_scope
   examples: |
     - that's not what I want
@@ -85,6 +96,8 @@ nlu:
     - How do I assess a road accident?
     - What should I do when an accident happens?
     - an accident occured, i don''t know what to do
+    - i think an accident just occured..what should i do
+    - my friend just had a motor accident
 - intent: handle_emergency
   examples: |
     - How do I handle an emergency?
@@ -124,12 +137,17 @@ nlu:
     - How do i perform CPR?
     - How to do CPR?
     - What is CPR?
+    - how do i perform cpr
+    - cpr
+    - how do i give cpr
+    - how do i giveCPR?
 - intent: CPR_adult
   examples: |
     - How do I perform CPR for an adult?
     - How do i perform CPR if the person is an adult?
     - How to do CPR for an adult?
     - What is CPR for an adult?
+    - /CPR_adult
 - intent: CPR_child
   examples: |
     - How do I perform CPR for a child?
@@ -151,12 +169,17 @@ nlu:
     - What is the procedure for giving breaths?
     - How to give breaths to a patient?
     - how do i go about giving breaths during the cpr
+    - how do i give breaths to a patient
+    - how do i give breaths
 - intent: manage_injured
   examples: |
     - How do i manage an injured person?
     - What is the first step to cure an injured person?
     - What steps do i follow to treat an injured person?
     - In what order do i treat the injured?
+    - some people are unconscious, some people are conscious ..what next
+    - some peopla are conscious , some are unconscious ...what next
+    - what do i do ?
 - intent: head_to_toe_examination
   examples: |
     - How do I examine the patient's body?
@@ -164,6 +187,7 @@ nlu:
     - How do I check what is wrong with the patient?
     - What is wrong with the patient?
     - How do I do a full body examination of the patient?
+    - how do i do a full body examination of an injured person
 - intent: pulse_check
   examples: |
     - How do i check for pulse?
@@ -171,18 +195,25 @@ nlu:
     - How do i know the pulse of a patient?
     - Where do i check the pulse on the body?
     - i am not sure but i want to check my friends pulse?
+    - how do i check the pulse
+    - how do  check my pulse
 - intent: drowning
   examples: |
     - How do i treat a person that is drowning?
     - What do i do to a person that is drowning?
     - Someone is drowning, what do i do?
     - Treatment for a drowning person?
+    - someone is drowning
+    - my friend is drowning
+    - someone is drowning. how do i help him
 - intent: mild_choking
   examples: |
     - How do i treat a person that is choking?
     - What do i do to a person that is choking?
     - Someone is choking, what do i do?
     - Treatment for a mild choking person?
+    - someone is choking what do i do
+    - someone is choking
 - intent: severe_choking
   examples: |
     - How do i treat a person that is choking severely?
@@ -195,6 +226,7 @@ nlu:
     - What do i do to a person that having cardiac arrest?
     - Someone having cardiac arrest, what do i do?
     - Treatment for a person having cardiac arrest?
+    - what should i do when someone has a cardiac arrest
 - intent: heart_attack
   examples: |
     - How do i treat a person that having a heart attack?
@@ -228,6 +260,7 @@ nlu:
     - Someone just fainted, what do i do?
     - Treatment for a person fainted?
     - my friend just fainted
+    - my friend fainted
 - intent: external_bleeding
   examples: |
     - How do i treat a person that is bleeding seriously?
@@ -235,6 +268,9 @@ nlu:
     - Someone is bleeding excessively, what do i do?
     - Treatment for external bleeding?
     - Treatment for a person that is bleeding too much?
+    - she is bleeding too much. what do I do
+    - bleeding
+    - it is bleeding
 - intent: internal_bleeding
   examples: |
     - How do i treat a person that has internal bleeding?
@@ -259,6 +295,7 @@ nlu:
     - Someone has amputation, what should i do?
     - Treatment for amputation?
     - Treatment for a person with a cut off body part?
+    - her finger cut out of her body , what first aid should I do
 - intent: punctured_wound
   examples: |
     - How do i treat a person with punctured wound?
@@ -283,6 +320,10 @@ nlu:
     - Someone has burns, what should i do?
     - Treatment for burns?
     - Treatment for a person with burns?
+    - my friend has burns all over from an accident
+    - i am on fire
+    - I am burning
+    - i am burning
 - intent: broken_bone
   examples: |
     - How do i treat a person with a broken bone?
@@ -290,6 +331,9 @@ nlu:
     - Someone has a broken hand, what should i do?
     - Treatment for broken bone?
     - Treatment for a person with broken bone?
+    - i think i just broke my ankle
+    - i broke my leg badly
+    - i think i just broke my anke
 - intent: dislocation
   examples: |
     - How do i treat a person with dislocation?
@@ -299,6 +343,7 @@ nlu:
     - Treatment for dislocated shoulder?
     - Treatment for dislocated wrist?
     - Treatment for a person with dislocated leg?
+    - i dislocated my arm in an accident
 - intent: strain
   examples: |
     - How do i treat a person with a strain?
@@ -314,6 +359,7 @@ nlu:
     - Treatment for sprained ankle?
     - Treatment for a person with sprain?
     - Treatment for swelling and bruising in the ankle?
+    - i sprained my ankle after an accident
 - intent: head_injury
   examples: |
     - How do i treat a person with head injury?
@@ -323,6 +369,8 @@ nlu:
     - Treatment for a person bleeding on the head?
     - Treatment for wound on the scalp?
     - Treatment for wound on the face?
+    - bleeding on the head
+    - she is bleeding on her head
 - intent: head_injury_conscious
   examples: |
     - How do i treat a conscious person with head injury?
@@ -419,6 +467,7 @@ nlu:
     - Someone has nose bleed, what should i do?
     - Treatment for nose bleeding?
     - Treatment for a person bleeding nose?
+    - her nose is bleeeding
 - intent: bruise
   examples: |
     - How do i treat a person with bruise?
@@ -426,6 +475,9 @@ nlu:
     - Someone has a bruise, what should i do?
     - Treatment for bruise?
     - Treatment for a person with bruises?
+    - i scratched myself seriously
+    - i just scratched myself seriously
+    - i scartched myself seriously
 - intent: shock
   examples: |
     - How do i treat a person in shock?
@@ -433,6 +485,8 @@ nlu:
     - Someone is in shock, what should i do?
     - Treatment for shock?
     - Treatment for a person in shock?
+    - my friend fell into shock and i don't know what to do
+    - she went into shock
 - intent: blister
   examples: |
     - How do i treat a person with blisters?

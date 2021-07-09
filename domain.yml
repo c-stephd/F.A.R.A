@@ -135,6 +135,8 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
+- nlu_fallback:
+    use_entities: true
 entities: []
 slots: {}
 responses:
@@ -194,7 +196,8 @@ responses:
       5.	Manage severe bleedings and other injuries.
       6.	Dial emergency number 112 and ask for help.
   utter_handle_emergency_unconscious:
-  - text: |-
+  - image: https://res.cloudinary.com/c-stephd/image/upload/v1625696091/FARA%20bot/emergency_i92n7b.jpg
+    text: |-
       To handle emergency;
       1.	Ensure that the area is safe for you, the bystanders and the patient
       2.	Check for response from the patient; ask for a name or squeeze shoulders of the patient
@@ -207,16 +210,15 @@ responses:
       9.	If the patient stops breathing, roll them onto their back and start CPR.
       10. Start CPR of 30 chest compressions and 2 breaths. Continue CPR until help arrives or the patient starts breathing or you are physically unable to continue.
       11. If, during CPR, the patient starts breathing but is still unconscious, turn them back into the recovery position. Continue to check the patient. Be ready to turn the patient onto their back again and restart CPR if breathing stops.
-    image:  "https://res.cloudinary.com/c-stephd/image/upload/v1625696091/FARA%20bot/emergency_i92n7b.jpg"
   utter_recovery_position:
-  - text: |
+  - image: https://res.cloudinary.com/c-stephd/image/upload/v1625696121/FARA%20bot/Recovery_position_x9c19j.png
+    text: |
       To put the patient in recovery position;
       1.	Kneel beside the casualty. Remove the patient’s glasses and any bulky objects, such as mobile phones or large bunches of keys, from their pockets. Do not search pockets for small items.
       2.	Make sure that both of the casualty’s legs are straight. Place the arm that is closest to you at right angles to the casualty’s body, with the elbow bent and the palm facing upward.
       3.	Bring the arm that is farthest from you across the casualty’s chest, and hold the back of the hand against the cheek closest to you. With your other hand, grasp the far leg just above their knee and pull it up, keeping the foot flat on the ground.
       4.	Keeping the casualty’s hand pressed against their cheek, pull on the far leg and roll the casualty toward you and onto their side.
       5.	If the patient is an infant under 1 year old, lie the infant face down on your forearm and support the infant’s head with your hand.
-    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696121/FARA%20bot/Recovery_position_x9c19j.png"
   utter_recovery_position_spinal_injury:
   - text: |-
       To put the patient in recovery position;
@@ -233,7 +235,8 @@ responses:
       title: infant
     text: Do you want to perform CPR for an adult, a child (above one years old) or an infant (below one years old)
   utter_CPR_adult:
-  - text: |-
+  - image: https://res.cloudinary.com/c-stephd/image/upload/v1625696060/FARA%20bot/chest_compressoion_nxlgsk.jpg
+    text: |-
       To perform CPR;
       1.	Ensure that the patient is on a firm surface. Place the patient on their back and kneel beside the patient’s chest. Locate the lower half of the breastbone in the center of the chest.
       2.	Place the heel of one hand on the lower half of the breastbone and the heel of the other hand on top of the first hand. Interlock the fingers of your hands and raise your fingers.
@@ -242,7 +245,6 @@ responses:
       5.	At least 5 sets of 30 compressions and 2 breaths should be achieved in two minutes and interruptions should be minimized as much as possible.
       6.	CPR should be continued until the patient starts breathing normally, you are physically unable to continue, more qualified help arrives and takes over or a healthcare professional directs that CPR be ceased.
       7.	Keep in mind that any attempt at resuscitation is better than no attempt at all. Giving only compressions is better than nothing at all. 
-    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696060/FARA%20bot/chest_compressoion_nxlgsk.jpg"
   utter_CPR_child:
   - text: |-
       To perform CPR;
@@ -292,32 +294,34 @@ responses:
       15. Check the legs. Look and feel for bleeding, swelling, deformity, or tenderness. Ask the casualty to raise each leg in turn, and to move her ankles and knees.
       16. Check the movement and feeling in the toes. Check that the victim has no abnormal sensations in her feet or toes. Compare the feet. Look at the skin colour: gray-blue skin may indicate a circulatory disorder or an injury due to cold.
   utter_pulse_check:
-  - text: |-
+  - image: https://res.cloudinary.com/c-stephd/image/upload/v1625696109/FARA%20bot/pulse_check2_ct5ntu.png
+    text: |-
       1.	The pulse may be felt at the wrist (radial pulse), or if this is not possible, the neck (carotid pulse).
       2.	For radial pulse, Place the pads of two or three fingers below the wrist creases at the base of the thumb.
       3.	For carotid pulse, Place the pads of two fingers in the hollow between the large neck muscle and the windpipe.
       4.	In babies, the pulse in the upper arm (brachial pulse) is easier to find. Place the pads of two fingers on the inner side of an infant’s upper arm.
       5.	When checking a pulse, use your fingers (not your thumb) and press lightly against the skin. Record the following points; Rate (number of beats per minute), Strength (strong or weak), Rhythm (regular or irregular).
-    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696109/FARA%20bot/pulse_check2_ct5ntu.png"
   utter_drowning:
   - text: |-
-      1.	The pulse may be felt at the wrist (radial pulse), or if this is not possible, the neck (carotid pulse).
-      2.	For radial pulse, Place the pads of two or three fingers below the wrist creases at the base of the thumb.
-      3.	For carotid pulse, Place the pads of two fingers in the hollow between the large neck muscle and the windpipe.
-      4.	In babies, the pulse in the upper arm (brachial pulse) is easier to find. Place the pads of two fingers on the inner side of an infant’s upper arm.
-      5.	When checking a pulse, use your fingers (not your thumb) and press lightly against the skin. Record the following points; Rate (number of beats per minute), Strength (strong or weak), Rhythm (regular or irregular).
+      1.	Remove the victim from the water as soon as possible, but do not endanger your own safety. Throw a rope or something that floats and which may aid the victim in keeping their head above water. Call for help. 
+      2.	If the patient is unconscious and not breathing normally, start CPR. 
+      3.	If the patient is breathing place them into the recovery position and continue to check their breathing. 
+      4.	Call emergency number 112 for an ambulance for all drowning patients, even if the event is seemingly minor or the patient appears to have recovered fully.
   utter_mild_choking:
-  - text: |-
+  - image: https://res.cloudinary.com/c-stephd/image/upload/v1625696075/FARA%20bot/choking2_znqtng.jpg
+    text: |-
       If the airway is only partly blocked, the person will usually be able to speak, cry, cough or breathe. In situations like this, a person will usually be able to clear the blockage themselves.
-      If choking is mild:1.	Encourage the person to cough to try to clear the blockage2.	Ask them to try to spit out the object if it’s in their mouth3.	Don't put your fingers in their mouth to help them because they may accidentally bite you
+      If choking is mild:
+      1.	Encourage the person to cough to try to clear the blockage
+      2.	Ask them to try to spit out the object if it’s in their mouth3.	Don't put your fingers in their mouth to help them because they may accidentally bite you
       4.	If coughing doesn’t work, start back blows and call 112 for an ambulance.
-       5.	Bend the patient forward and give up to 5 sharp blows on the back between the shoulder blades with the heel of one hand. Check if the blockage has been removed after each blow.
+      5.	Bend the patient forward and give up to 5 sharp blows on the back between the shoulder blades with the heel of one hand. Check if the blockage has been removed after each blow.
       6.	If the blockage has not cleared after 5 back blows, give up to 5 chest thrusts by placing one hand in the middle of the patient’s back for support and the heel of the other on the lower half of the sternum. Thrusts should be slower and sharper than CPR compressions. Check if the blockage has been removed after each thrust.
       7.	If the blockage has not cleared after 5 thrusts, continue alternating 5 back blows with 5 chest thrusts until medical aid arrives.
       8.	If the patient becomes unconscious, start following the steps for handling emergency before the ambulance arrives.
-   image:  "https://res.cloudinary.com/c-stephd/image/upload/v1625696075/FARA%20bot/choking2_znqtng.jpg"
- utter_severe_choking:
-  - text: |-
+  utter_severe_choking:
+  - image: https://res.cloudinary.com/c-stephd/image/upload/v1625697040/FARA%20bot/choking_mlrdwo.jpg
+    text: |-
       If choking is severe, the person won’t be able to speak, cry, cough or breathe, and without help they’ll eventually become unconscious. To help an adult or child over one year old:
       1.	Stand behind the person and slightly to one side. Support their chest with one hand. Lean the person forward so that the object blocking their airway will come out of their mouth, rather than moving further down.
       2.	Give up to five sharp blows between the person’s shoulder blades with the heel of your hand (the heel is between the palm of your hand and your wrist).
@@ -333,13 +337,12 @@ responses:
       11. The aim is to get the obstruction out with each chest thrust, rather than necessarily doing all five.
       12. If the obstruction doesn't clear after three cycles of back blows and chest thrusts, dial 999 or 112 to ask for an ambulance, and continue until help arrives.
       13. The person choking should always be seen by a healthcare professional afterwards to check for any injuries or small pieces of the obstruction that remain.
-    image:  "https://res.cloudinary.com/c-stephd/image/upload/v1625697040/FARA%20bot/choking_mlrdwo.jpg"
   utter_cardiac_arrest:
   - text: |-
       1.	Follow the steps for handling emergency and call 112 for an ambulance.
       2. Start CPR.
-       3. Continue CPR until the patient pushes you away or it is clear that they are breathing normally or responding, or
-        4. until medical aid arrives.
+      3. Continue CPR until the patient pushes you away or it is clear that they are breathing normally or responding, or
+      4. until medical aid arrives.
       5. The most effective treatment for cardiac arrest is using a defibrillator.
   utter_heart_attack:
   - buttons:
@@ -358,15 +361,15 @@ responses:
       6.	It is not recommended that you drive the patient to the hospital yourself, as you may need to perform CPR.
       7.	Stay with the patient until medical aid arrives. Be prepared to give CPR
   utter_heart_attack_unconscious:
-  - text: |2-
-       1.	Follow the steps for handling emergency.
+  - text: |-
+      1.	Follow the steps for handling emergency.
       2.	Place the patient in the recovery position and call 112 for an ambulance. Stay on the phone. It is not recommended that you drive the patient to the hospital yourself, as you may need to perform CPR.
       3.	Stay with the patient until medical aid arrives. Be prepared to give CPR if symptoms worsen. 
   utter_stroke:
-  - text: |2-
-       1.	Follow the steps for handling emergency then call 112 for an ambulance.
+  - text: |-
+      1.	Follow the steps for handling emergency then call 112 for an ambulance.
       2.	Reassure the patient. The patient may not be able to clearly communicate which may cause them extreme anxiety.
-       3.	Help the patient to sit or lie down in a comfortable position. Support the patient’s head and shoulders on pillows. Loosen any tight clothing. Keep the patient warm, with a blanket if necessary.
+      3.	Help the patient to sit or lie down in a comfortable position. Support the patient’s head and shoulders on pillows. Loosen any tight clothing. Keep the patient warm, with a blanket if necessary.
       4.	Wipe away any secretions from the patient’s mouth
   utter_fainting:
   - text: |-
@@ -401,14 +404,14 @@ responses:
       5.	Apply a soft, dry dressing and fix in position.
       6.	Dispose of used materials, clean work surfaces and wash hands.
   utter_amputation:
-  - text: |-
+  - image: https://res.cloudinary.com/c-stephd/image/upload/v1625696049/FARA%20bot/amputation_kb2irm.jpg
+    text: |-
       1.	Follow the steps for handling emergency.
       2.	Call 112 for an ambulance.
       3.	Apply direct pressure to the wound. Apply a sterile dressing and bandage.
       4.	For the amputated part, do not wash or soak the amputated part in water or any other liquid.
       5.	Wrap the part in gauze or material and place in a watertight container, such as a sealed watertight plastic bag. Place the sealed container in cold water that has had ice (if available) added to it. The severed part should not be in direct contact with the ice.
       6.	Send the part to the hospital with the patient.
-    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696049/FARA%20bot/amputation_kb2irm.jpg"
   utter_punctured_wound:
   - text: |-
       1.	Do not try to remove the object as it may be plugging the wound and restricting bleeding. Removing it may result in severe bleeding or may damage deep structures. Do not put any pressure on the object.
@@ -440,7 +443,8 @@ responses:
       11.	Continue to check the patient for shock and treat if necessary.
       12.	If the burn is larger than a coin piece or deep, seek medical aid.
   utter_broken_bone:
-  - text: |-
+  - image: https://res.cloudinary.com/c-stephd/image/upload/v1625696054/FARA%20bot/broken_bone_witq23.jpg
+    text: |-
       1.	Follow the steps for handling emergency.
       2.	Ask the patient to remain as still as possible. Control any bleeding, cover any wounds and check for other fractures.
       3.	Immobilize the broken bone by placing a padded splint along the injured limb.
@@ -449,7 +453,6 @@ responses:
       6.	Check that the bandages are not too tight and watch for signs of loss of circulation to the limb every 15 minutes.
       7.	Seek medical aid.
       8.	Do not try to force a broken bone back into place.
-    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696054/FARA%20bot/broken_bone_witq23.jpg"
   utter_dislocation:
   - text: |-
       1.	Follow the steps for handling emergency.
@@ -609,7 +612,8 @@ responses:
       3.	Reduce any causes of stress or anxiety.
       4.	If the pain does not go away dial 112 for an ambulance.
   utter_nose_bleed:
-  - text: |-
+  - image: https://res.cloudinary.com/c-stephd/image/upload/v1625696098/FARA%20bot/nosebleedfirstaid_lau0fx.jpg
+    text: |-
       1.	If the patient is feeling faint, sit them down, advise them to tilt head forward, allowing blood to drain from the nostrils.
       2.	Ask patient to breath through their mouth.
       3.	With a finger and thumb show them how to pinch the lower fleshy soft end of the nose for at least 10 minutes (it is useless to put pressure on the root of the nose or the nose bones).
@@ -618,7 +622,6 @@ responses:
       6.	Give patient a cloth or tissue to mop up any blood.
       7.	After 10 minutes ask patient to release the pressure. If bleeding has not stopped reapply pressure.
       8.	If bleeding has not stopped after 30 minutes, or the patient is taking ‘anti-coagulant' drugs i.e. Warfarin, take them to hospital.
-    image: "https://res.cloudinary.com/c-stephd/image/upload/v1625696098/FARA%20bot/nosebleedfirstaid_lau0fx.jpg"
   utter_bruise:
   - text: |-
       1.	Rest the bruised area, if possible.

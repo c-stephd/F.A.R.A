@@ -18,6 +18,11 @@ rules:
   - action: utter_handle_emergency_unconscious
   - action: utter_recovery_position
   
+- rule: Go to handle emergency conscious
+  steps:
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+
 
 - rule: Handling emergency mild choking
   steps:

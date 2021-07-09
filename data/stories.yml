@@ -91,15 +91,105 @@ stories:
 - story: Story from Conversation ID 886607f35aff425d9f6d97e58b5f3e3b
   steps:
   - action: utter_how_mayhelp
-  - action: utter_burn
   - intent: burn
+  - action: utter_burn
   - action: utter_handle_emergency
   - intent: handle_emergency_conscious
   - action: utter_handle_emergency_conscious
   - intent: helpful
   - action: utter_great
-- story: Story from Conversation ID fd2f0e1aa8b6473b996328a213c30092
+- story: Story from Conversation ID 579204b2729147adade160b0a33c0621
   steps:
-  - intent: shock
+  - intent: head_to_toe_examination
+  - action: utter_head_to_toe_examination
+  - intent: pulse_check
+  - action: utter_pulse_check
+  - intent: greet
+  - action: utter_greet
+  - intent: CPR
+  - action: utter_CPR
+  - intent: CPR_child
+  - action: utter_CPR_child
+  - intent: helpful
+  - action: utter_great
+- story: Story from Conversation ID 40b1a63cdb6644a39f8a2079b9151f6a
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_how_mayhelp
+  - intent: mild_choking
+  - action: utter_mild_choking
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+- story: Story from Conversation ID b5fb1ebed83f4a3f85e0085505ecb104
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_how_mayhelp
+  - intent: cardiac_arrest
+  - action: utter_cardiac_arrest
+  - action: utter_CPR
+  - action: utter_handle_emergency
+- story: Story from Conversation ID af116d52c6d441df9e12f96cb31e435d
+  steps:
+  - intent: fainting
+  - action: utter_fainting
+  - action: utter_handle_emergency
   - intent: handle_emergency_unconscious
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+  - intent: nlu_fallback
+  - action: utter_great
+- story: Story from Conversation ID 7938503127e141fda3a0750104bd8345
+  steps:
+  - intent: external_bleeding
+  - action: utter_external_bleeding
+  - action: utter_handle_emergency
+  - intent: handle_emergency_unconscious
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+  - intent: helpful
+  - action: utter_great
+- story: Story from Conversation ID 887cdca3530c480e8851572dd08ef1fd
+  steps:
+  - intent: dislocation
+  - action: utter_dislocation
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+- story: Story from Conversation ID eaedb9b1c06542e69c4d5fc062f91757
+  steps:
+  - intent: head_injury
+  - action: utter_head_injury
+  - intent: head_injury_unconscious
+  - action: utter_head_injury_unconscious
+  - action: utter_handle_emergency_unconscious
+- story: Story from Conversation ID d3c9c3b9a14e45c7af640382b4871c1c
+  steps:
+  - intent: give_breaths
   - action: utter_give_breaths
+- story: Story from Conversation ID 805f59ab3ab5449a912edf3882240a51
+  steps:
+  - intent: nose_bleed
+  - action: utter_nose_bleed
+- story: Story from Conversation ID 28dcd57ff3c94a0cbccb0646348ed4e5
+  steps:
+  - intent: drowning
+  - action: utter_drowning
+- story: Story from Conversation ID 20d6676aea2643f0abb031998fe4de94
+  steps:
+  - intent: mild_choking
+  - action: utter_mild_choking
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: helpful
+  - action: utter_great
+- story: Story from Conversation ID a309a5f84d3440c1ae848567c56d186c
+  steps:
+  - intent: broken_bone
+  - action: utter_broken_bone
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
