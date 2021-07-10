@@ -18,6 +18,11 @@ nlu:
     - Hello
     - hiiii
     - hi?
+    - 'hello
+    - howfar
+    - yo!
+    - Hi
+    - hii
 - intent: goodbye
   examples: |
     - good afternoon
@@ -38,6 +43,8 @@ nlu:
     - yes thanks
     - okay
     - that was helpful thanks
+    - i love you
+    - I AM SO HAPPY
 - intent: affirm
   examples: |
     - yes
@@ -48,6 +55,7 @@ nlu:
     - correct
     - yes you were
     - i am fine
+    - alright
 - intent: deny
   examples: |
     - no
@@ -80,6 +88,16 @@ nlu:
     - nevermind
     - I want to do something else
     - I changed my mind
+    - i'm lonely will you stay with me as I'm waiting for the storm to pass
+    - i have swallowed a snake
+    - the number you gave is is useless
+    - watin i go do bayi
+    - the emergency number is not working oooooo
+    - you dey craze
+    - we're not friends again
+    - shut the fuck up!!!!!!!!!!
+    - nonsense
+    - bitch
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -89,6 +107,8 @@ nlu:
     - are you a verified doctor?
     - can you really help me?
     - how do i know you are right?
+    - are you mad?
+    - because i'm managing to talk to you abi
 - intent: assess_accident
   examples: |
     - How do I assess an accident?
@@ -98,6 +118,12 @@ nlu:
     - an accident occured, i don''t know what to do
     - i think an accident just occured..what should i do
     - my friend just had a motor accident
+    - accident
+    - i am in an accident, what should i do
+    - i came across an accident what should I do
+    - Car accident
+    - Accident
+    - so I was involved in a mass casualty
 - intent: handle_emergency
   examples: |
     - How do I handle an emergency?
@@ -118,6 +144,7 @@ nlu:
     - What to do for a unconscious patient?
     - What to do if a patient is unconscious?
     - the patient is unconscious
+    - somebody is unconscious
 - intent: recovery_position
   examples: |
     - How do i put a patient in recovery position?
@@ -141,6 +168,7 @@ nlu:
     - cpr
     - how do i give cpr
     - how do i giveCPR?
+    - how do i give CPR
 - intent: CPR_adult
   examples: |
     - How do I perform CPR for an adult?
@@ -171,6 +199,7 @@ nlu:
     - how do i go about giving breaths during the cpr
     - how do i give breaths to a patient
     - how do i give breaths
+    - how do i give breaths to the person
 - intent: manage_injured
   examples: |
     - How do i manage an injured person?
@@ -180,6 +209,8 @@ nlu:
     - some people are unconscious, some people are conscious ..what next
     - some peopla are conscious , some are unconscious ...what next
     - what do i do ?
+    - if I get hit by a car what do I do
+    - a lot of people are injured and I don't know what to do
 - intent: head_to_toe_examination
   examples: |
     - How do I examine the patient's body?
@@ -214,6 +245,7 @@ nlu:
     - Treatment for a mild choking person?
     - someone is choking what do i do
     - someone is choking
+    - I'm choking
 - intent: severe_choking
   examples: |
     - How do i treat a person that is choking severely?
@@ -271,6 +303,9 @@ nlu:
     - she is bleeding too much. what do I do
     - bleeding
     - it is bleeding
+    - blood everywhere
+    - i am bleeding
+    - my leg is bleeding
 - intent: internal_bleeding
   examples: |
     - How do i treat a person that has internal bleeding?
@@ -334,6 +369,9 @@ nlu:
     - i think i just broke my ankle
     - i broke my leg badly
     - i think i just broke my anke
+    - my ankle is broken
+    - there are broken bones
+    - my friends leg broke
 - intent: dislocation
   examples: |
     - How do i treat a person with dislocation?
@@ -360,6 +398,7 @@ nlu:
     - Treatment for a person with sprain?
     - Treatment for swelling and bruising in the ankle?
     - i sprained my ankle after an accident
+    - i think my ankle is sprained or broken. how do I know which it is
 - intent: head_injury
   examples: |
     - How do i treat a person with head injury?
@@ -371,6 +410,10 @@ nlu:
     - Treatment for wound on the face?
     - bleeding on the head
     - she is bleeding on her head
+    - Broke my head
+    - Just fell off a trailer and broke my head
+    - oya na my head is aching
+    - i feel light headed
 - intent: head_injury_conscious
   examples: |
     - How do i treat a conscious person with head injury?
@@ -393,6 +436,7 @@ nlu:
     - Treatment for spinal injury?
     - Treatment for neck injury?
     - Treatment for loss of movement below the site of injury?
+    - and I can't move
 - intent: spinal_neck_injury_conscious
   examples: |
     - How do i treat a conscious person with neck injury?
@@ -416,6 +460,8 @@ nlu:
     - Treatment for injury in the stomach?
     - Treatment for protruding intestines from abdominal injury?
     - Treatment for wound on the stomach?
+    - i have a cow horn stock in my liver
+    - so my stomach hurts
 - intent: penetrating_chest_wound
   examples: |
     - How do i treat a person with penetrating chest wound?
@@ -487,6 +533,7 @@ nlu:
     - Treatment for a person in shock?
     - my friend fell into shock and i don't know what to do
     - she went into shock
+    - i think a man is going into shock
 - intent: blister
   examples: |
     - How do i treat a person with blisters?
@@ -500,6 +547,7 @@ nlu:
     - An accident occurred, what do I take the patient to the hospital?
     - How do I transport a casualty of an accident to the hospital?
     - Procedure for taking a patient to the hospital?
+    - i have done everything, what is next
 - intent: ear_bleeding
   examples: |
     - How do i treat a person bleeding in the ear?
@@ -543,3 +591,9 @@ nlu:
     - what to do if i get a Broken Toe?
     - Which medicine to take if I get a Broken Toe?
     - How to cure Broken Toe?
+- intent: stress
+  examples: |
+    - i'm just really stressed
+- intent: take_casualty_hospital
+  examples: |
+    - but the person is not still unconscious

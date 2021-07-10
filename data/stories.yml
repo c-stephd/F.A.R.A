@@ -193,3 +193,13 @@ stories:
   - action: utter_handle_emergency
   - intent: handle_emergency_conscious
   - action: utter_handle_emergency_conscious
+- story: Story from Conversation ID 8281bd466b63433e985cd305587e9043
+  steps:
+  - intent: CPR
+  - action: utter_CPR
+  - intent: CPR_adult
+  - action: utter_CPR_adult
+  - intent: give_breaths
+  - action: utter_give_breaths
+  - intent: helpful
+  - action: utter_great
