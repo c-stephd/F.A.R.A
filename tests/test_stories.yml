@@ -96,3 +96,68 @@ stories:
     user: |-
       thanks
   - action: utter_great
+- story: Story from Conversation ID 42714cc4626d45fbb32f4877d452ca22
+  steps:
+  - intent: stress
+    user: |-
+      i am stressed
+  - action: utter_stress
+  - intent: manage_injured
+    user: |-
+      a lot of people are injured
+  - action: utter_manage_injured
+  - intent: CPR
+    user: |-
+      how do i perform cpr
+  - action: utter_CPR
+  - intent: CPR_infant
+    user: |-
+      /CPR_infant
+  - action: utter_CPR_infant
+  - intent: CPR_adult
+    user: |-
+      what of cpr for an adult
+  - action: utter_CPR_adult
+  - intent: taking_casualty_to_hospital
+    user: |-
+      the person is till unconscious , what next
+  - action: utter_taking_casualty_to_hospital
+- story: Story from Conversation ID 42714cc4626d45fbb32f4877d452ca22
+  steps:
+  - intent: stress
+    user: |-
+      i am stressed
+  - action: utter_stress
+  - intent: manage_injured
+    user: |-
+      a lot of people are injured
+  - action: utter_manage_injured
+  - intent: CPR
+    user: |-
+      how do i perform cpr
+  - action: utter_CPR
+  - intent: CPR_infant
+    user: |-
+      /CPR_infant
+  - action: utter_CPR_infant
+  - intent: CPR_adult
+    user: |-
+      what of cpr for an adult
+  - action: utter_CPR_adult
+  - intent: taking_casualty_to_hospital
+    user: |-
+      the person is till unconscious , what next
+  - action: utter_taking_casualty_to_hospital
+  - intent: out_of_scope
+    user: |-
+      bitch
+  - action: utter_out_of_scope
+  - intent: broken_bone
+    user: |-
+      my friend broke her leg
+  - action: utter_broken_bone
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious

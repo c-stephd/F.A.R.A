@@ -7,6 +7,10 @@ session_config:
 intents:
 - stress:
     use_entities: true
+- take_casualty_hospital:
+    use_entities: true
+- instance:
+    use_entities: true
 - greet:
     use_entities: true
 - goodbye:
@@ -172,6 +176,8 @@ responses:
   - text: I can't handle that request, we can start all over again
   - text: Let us begin again
   - text: Sorry, I do not follow, can we start again?
+  - text: Tell me an injury and I will tell you the first-aid procedure
+  - text: Are you facing any pain or bleeding anywhere? What are they?
   utter_iamabot:
   - text: I am a first-aid bot for road accidents, powered by Rasa.
   - text: My name is Fara, I am a first-aid bot for road accidents.
@@ -655,7 +661,7 @@ responses:
       8.	Change the bandage any time it gets wet. Take it off when you go to bed so the area can dry.
   utter_taking_casualty_to_hospital:
   - text: |-
-      It is possible that you would be the one to carry the patient to the hospital                                                          1.	Make sure that the patient should be carried on a firm board or stretcher, so that the spine remains stable if the patient is unconscious.
+      If you have performed the necessary procedures for handling an emergency, it is possible that you might carry the patient to the hospital                         1.	Make sure that the patient should be carried on a firm board or stretcher, so that the spine remains stable if the patient is unconscious.
       2.	Ensure while shifting the patient's back, neck and airway need to be protected from further injury.
       3.	If the patient is unconscious, gently place cloth or towel under the neck so that the neck does not sag against ground.
       4.	During transportation keep a close watch on whether the patient’s airway is clear, whether the patient is breathing and whether you can feel the pulse in the patient
@@ -692,6 +698,16 @@ responses:
       1. To help decrease pain and swelling in a broken toe, elevate the foot,ice the injury, and stay off the foot.
       2. Depending on the severity of the fracture, the toe may need to be put back into place (reduced), andsome compound toe fractures may require surgery.
       3. Most broken toes heal without complications in six weeks.
-actions: []
+  utter_stress:
+  - text: I understand that you might be panicking, but no worries Fara is here with you
+  - text: Do not fret, I am here to help
+  - text: Please take deep breaths and calm down, I am here with you
+  utter_instance:
+  - text: Where there any injuries that occurred?
+  - text: Where any injuries sustained?
+  - text: Is there bleeding or pain anywhere?
+actions:
+- utter_stress
+- utter_instance
 forms: {}
 e2e_actions: []

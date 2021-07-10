@@ -203,3 +203,35 @@ stories:
   - action: utter_give_breaths
   - intent: helpful
   - action: utter_great
+- story: Story from Conversation ID f58cc0251bfd41538cf0a74f54db1df7
+  steps:
+  - intent: taking_casualty_to_hospital
+  - action: utter_taking_casualty_to_hospital
+- story: Story from Conversation ID eb884d9bb8634d06ac2d1bb5631f7677
+  steps:
+  - intent: CPR
+  - action: utter_CPR
+  - intent: CPR_adult
+  - action: utter_CPR_adult
+- story: Story from Conversation ID e22238f0398148f6a16b78e4412262cd
+  steps:
+  - intent: CPR
+  - action: utter_CPR
+  - intent: CPR_infant
+  - action: utter_CPR_infant
+- story: Story from Conversation ID 1fcf4f021e2f410d84ab795a94c3d3a9
+  steps:
+  - intent: manage_injured
+  - action: utter_manage_injured
+- story: Story from Conversation ID 227415d851cf4f13acd4ba7f230a47c2
+  steps:
+  - intent: manage_injured
+  - action: utter_manage_injured
+- story: Story from Conversation ID 92e8068ba50941d2a1806fef91a94be9
+  steps:
+  - intent: taking_casualty_to_hospital
+  - action: utter_taking_casualty_to_hospital
+- story: Story from Conversation ID 05163cdcfbc84af5b11ec91fd0462027
+  steps:
+  - intent: instance
+  - action: utter_instance

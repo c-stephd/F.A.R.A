@@ -544,10 +544,13 @@ nlu:
 - intent: taking_casualty_to_hospital
   examples: |
     - How do I take a patient to the hospital?
-    - An accident occurred, what do I take the patient to the hospital?
+    - An accident occurred, how should I take the patient to the hospital?
     - How do I transport a casualty of an accident to the hospital?
     - Procedure for taking a patient to the hospital?
+    - but the person is not still unconscious
     - i have done everything, what is next
+    - what is the ETA for an ambulance
+    - the person is still unconscious what do I do
 - intent: ear_bleeding
   examples: |
     - How do i treat a person bleeding in the ear?
@@ -594,6 +597,8 @@ nlu:
 - intent: stress
   examples: |
     - i'm just really stressed
-- intent: take_casualty_hospital
+    - i am really stressed
+    - i am panicking
+- intent: instance
   examples: |
-    - but the person is not still unconscious
+    - i fell of a bike
