@@ -161,3 +161,475 @@ stories:
     user: |-
       /handle_emergency_conscious
   - action: utter_handle_emergency_conscious
+- story: Story from Conversation ID 95f15a73c3ce448cb3776be54683c3ae
+  steps:
+  - intent: heart_attack
+    user: |-
+      i think someone is having a heart attcak
+  - action: utter_heart_attack
+  - intent: heart_attack_conscious
+    user: |-
+      /heart_attack_conscious
+  - action: utter_heart_attack_conscious
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+- story: Story from Conversation ID 4c9ca22f479a490ba13fd53e03f1be4d
+  steps:
+  - intent: greet
+    user: |-
+      hi
+  - action: utter_greet
+  - intent: manage_injured
+    user: |-
+      i got hit by a car
+  - action: utter_manage_injured
+  - intent: broken_bone
+    user: |-
+      someone has a broken leg
+  - action: utter_broken_bone
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+- story: Story from Conversation ID 5bddd0f91b98462a9cceb34a62440e55
+  steps:
+  - intent: greet
+    user: |-
+      hi
+  - action: utter_greet
+  - intent: stress
+    user: |-
+      i am stressed
+  - action: utter_stress
+  - intent: helpful
+    user: |-
+      thanks
+  - action: utter_great
+  - action: utter_goodbye
+  - intent: instance
+    user: |-
+      umm..i go hit by a bike
+  - action: utter_instance
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_great
+  - intent: nose_bleed
+    user: |-
+      my nose is bleeding
+  - action: utter_nose_bleed
+- story: Story from Conversation ID d6807b7bc9984b78b33648018fecb3fd
+  steps:
+  - intent: broken_bone
+    user: |-
+      i think my friends hand is broken
+  - action: utter_broken_bone
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: dislocation
+    user: |-
+      what of if it is just dislocated
+  - action: utter_dislocation
+  - action: utter_handle_emergency
+  - intent: helpful
+    user: |-
+      thanks
+  - action: utter_great
+- story: Story from Conversation ID 96663059905b497a9b256bdbe01b9b88
+  steps:
+  - intent: sprain
+    user: |-
+      her leg is sprained
+  - action: utter_sprain
+  - action: utter_handle_emergency
+  - intent: head_injury
+    user: |-
+      another person is bleeding seriously on the head
+  - action: utter_head_injury
+  - intent: head_injury_conscious
+    user: |-
+      /head_injury_conscious
+  - action: utter_head_injury_conscious
+  - action: utter_handle_emergency
+  - intent: affirm
+    user: |-
+      alright
+  - action: utter_great
+- story: Story from Conversation ID d61beb930f7f4639b3a71fda1cd822aa
+  steps:
+  - intent: penetrating_chest_wound
+    user: |-
+      something stabbed my friends chest
+  - action: utter_penetrating_chest_wound
+  - action: utter_handle_emergency
+  - intent: handle_emergency_unconscious
+    user: |-
+      /handle_emergency_unconscious
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+  - intent: taking_casualty_to_hospital
+    user: |-
+      the person is still unconscious
+  - action: utter_taking_casualty_to_hospital
+- story: Story from Conversation ID a1ecae4b95c54fb19f585a74148943b7
+  steps:
+  - intent: eye_injury
+    user: |-
+      his eye is stabbed
+  - action: utter_eye_injury
+  - action: utter_handle_emergency
+  - intent: handle_emergency_unconscious
+    user: |-
+      /handle_emergency_unconscious
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+  - intent: affirm
+    user: |-
+      alright
+  - action: utter_great
+- story: Story from Conversation ID 6e598c66dcef4ec7a168e148111f408e
+  steps:
+  - intent: anaphylaxis
+    user: |-
+      he is having very serious allergic reactions , what do I do
+  - action: utter_anaphylaxis
+  - action: utter_recovery_position
+  - intent: helpful
+    user: |-
+      great
+  - action: utter_great
+- story: Story from Conversation ID e06acac4b285473eb61cba7bd5e4b058
+  steps:
+  - intent: instance
+    user: |-
+      someone got hit by a car
+  - action: utter_instance
+  - intent: nose_bleed
+    user: |-
+      he is bleeding in the nose continuosly
+  - action: utter_nose_bleed
+  - intent: goodbye
+    user: |-
+      nice
+  - action: utter_goodbye
+- story: Story from Conversation ID 32d0f3f8607b402da883322e7fe513fa
+  steps:
+  - intent: bruise
+    user: |-
+      there are bruises all over his body
+  - action: utter_bruise
+  - intent: blister
+    user: |-
+      what do i do for a blister
+  - action: utter_blister
+  - action: utter_did_that_help
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_great
+  - action: utter_goodbye
+- story: Story from Conversation ID fc1c1334455941ec960ad097c879f75e
+  steps:
+  - intent: ear_bleeding
+    user: |-
+      someone else's ear is bleeding
+  - action: utter_ear_bleeding
+  - intent: head_injury
+    user: |-
+      so what do i do for a head injury
+  - action: utter_head_injury
+  - intent: head_injury_unconscious
+    user: |-
+      /head_injury_unconscious
+  - action: utter_head_injury_unconscious
+  - action: utter_handle_emergency_unconscious
+  - intent: taking_casualty_to_hospital
+    user: |-
+      the patient is still unconscious
+  - action: utter_taking_casualty_to_hospital
+- story: Story from Conversation ID 84a571c42d614bf3bb0f4a41a100dcef
+  steps:
+  - intent: hyperventilation
+    user: |-
+      he is hyperventilating
+  - action: utter_hyperventilation
+  - action: utter_did_that_help
+  - intent: affirm
+    user: |-
+      yp
+  - action: utter_great
+  - action: utter_goodbye
+- story: Story from Conversation ID 84a571c42d614bf3bb0f4a41a100dcef
+  steps:
+  - intent: hyperventilation
+    user: |-
+      he is hyperventilating
+  - action: utter_hyperventilation
+  - action: utter_did_that_help
+  - intent: affirm
+    user: |-
+      yp
+  - action: utter_great
+  - action: utter_goodbye
+  - intent: stress
+    user: |-
+      i am really stressed though
+  - action: utter_stress
+  - intent: helpful
+    user: |-
+      i love you FARA
+  - action: utter_great
+- story: Story from Conversation ID 1da805d6f86c4f5b84db04bd5e45a3b8
+  steps:
+  - intent: drowning
+    user: |-
+      some people fell into the water
+  - action: utter_drowning
+  - intent: CPR
+    user: |-
+      how do i perform cpr
+  - action: utter_CPR
+  - intent: CPR_infant
+    user: |-
+      /CPR_infant
+  - action: utter_CPR_infant
+  - intent: CPR_adult
+    user: |-
+      what of cpr for an adult
+  - action: utter_CPR_adult
+  - intent: CPR_child
+    user: |-
+      cpr for someone above 1 years
+  - action: utter_CPR_child
+  - intent: recovery_position
+    user: |-
+      how do i put the person in recovery position
+  - action: utter_recovery_position
+- story: Story from Conversation ID 98bd207196cf4d599ec7d55a18a68f52
+  steps:
+  - intent: manage_injured
+    user: |-
+      there are a lot of injured persons , who do I treat first
+  - action: utter_manage_injured
+  - intent: severe_choking
+    user: |-
+      my friend is choking seriously
+  - action: utter_severe_choking
+- story: Story from Conversation ID 171d91835b2f497e9740d12477648d4b
+  steps:
+  - intent: shock
+    user: |-
+      i think she is experiencing shock
+  - action: utter_shock
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: fainting
+    user: |-
+      she just fainted
+  - action: utter_fainting
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+- story: Story from Conversation ID 4b4d842a7cf243faa80078cff02eb6a8
+  steps:
+  - intent: internal_bleeding
+    user: |-
+      there is internal bleeding
+  - action: utter_internal_bleeding
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: crush_injury
+    user: |-
+      something is crushing the persons leg
+  - action: utter_crush_injury
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: amputation
+    user: |-
+      the leg got cut out
+  - action: utter_amputation
+  - action: utter_handle_emergency
+  - intent: handle_emergency_unconscious
+    user: |-
+      /handle_emergency_unconscious
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+- story: Story from Conversation ID 1d51807472184d91baa29e568c9122ac
+  steps:
+  - intent: open_wound
+    user: |-
+      open wound
+  - action: utter_open_wound
+  - intent: burn
+    user: |-
+      he is burning
+  - action: utter_burn
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: punctured_wound
+    user: |-
+      something punctured him while he was running around
+  - action: utter_punctured_wound
+  - action: utter_did_that_help
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_great
+  - action: utter_goodbye
+- story: Story from Conversation ID 1d51807472184d91baa29e568c9122ac
+  steps:
+  - intent: open_wound
+    user: |-
+      open wound
+  - action: utter_open_wound
+  - intent: burn
+    user: |-
+      he is burning
+  - action: utter_burn
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: punctured_wound
+    user: |-
+      something punctured him while he was running around
+  - action: utter_punctured_wound
+  - action: utter_did_that_help
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_great
+  - action: utter_goodbye
+  - intent: head_to_toe_examination
+    user: |-
+      how do i do a full body examination
+  - action: utter_head_to_toe_examination
+- story: Story from Conversation ID 988efaddb41848158f8564932ed8ea19
+  steps:
+  - intent: open_wound
+    user: |-
+      she has some wounds
+  - action: utter_open_wound
+  - intent: severe_choking
+    user: |-
+      she is seriously choking
+  - action: utter_severe_choking
+  - intent: external_bleeding
+    user: |-
+      someone else is bleeding too much
+  - action: utter_external_bleeding
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: recovery_position
+    user: |-
+      how do i put someone in recovery position
+  - action: utter_recovery_position
+  - intent: head_to_toe_examination
+    user: |-
+      how do i check the injuries on  a victims body
+  - action: utter_head_to_toe_examination
+  - intent: cuts
+    user: |-
+      i cut myself badly
+  - action: utter_cuts
+  - intent: asthma
+    user: |-
+      an asthmatic attack
+  - action: utter_asthma
+  - intent: strain
+    user: |-
+      someone else strained her ankle
+  - action: utter_strain
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+    user: |-
+      /handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: spinal_neck_injury
+    user: |-
+      someone injured on the neck
+  - action: utter_spinal_neck_injury
+  - intent: spinal_neck_injury_unconscious
+    user: |-
+      /spinal_neck_injury_unconscious
+  - action: utter_spinal_neck_injury_unconscious
+  - action: utter_recovery_position_spinal_injury
+  - action: utter_handle_emergency_unconscious
+  - intent: angina
+    user: |-
+      angina
+  - action: utter_angina
+  - intent: ear_bleeding
+    user: |-
+      blood is coming out from his ear
+  - action: utter_ear_bleeding
+- story: Story from Conversation ID b219242e85d24a0aa531d9e91a33cdf0
+  steps:
+  - intent: open_wound
+    user: |-
+      i have wounds all over
+  - action: utter_open_wound
+  - intent: assess_accident
+    user: |-
+      an accident just occured what do i do
+  - action: utter_assess_accident
+  - intent: recovery_position
+    user: |-
+      how do i put the person in recovery position
+  - action: utter_recovery_position
+  - intent: cuts
+    user: |-
+      there is a cut on my hand
+  - action: utter_cuts
+  - intent: CPR
+    user: |-
+      how do i perform cpr
+  - action: utter_CPR
+  - intent: CPR_child
+    user: |-
+      /CPR_child
+  - action: utter_CPR_child
+  - intent: drowning
+    user: |-
+      my friend is drowning in the water
+  - action: utter_drowning
+  - intent: assess_accident
+    user: |-
+      what is the first step when an accident occurs
+  - action: utter_assess_accident
+  - intent: instance
+    user: |-
+      a trailer hit her
+  - action: utter_instance
+  - intent: external_bleeding
+    user: |-
+      she is bleeding seriously
+  - action: utter_external_bleeding
+  - action: utter_handle_emergency
+  - intent: handle_emergency_unconscious
+    user: |-
+      /handle_emergency_unconscious
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position

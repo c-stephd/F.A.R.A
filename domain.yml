@@ -7,8 +7,6 @@ session_config:
 intents:
 - stress:
     use_entities: true
-- take_casualty_hospital:
-    use_entities: true
 - instance:
     use_entities: true
 - greet:
@@ -683,9 +681,9 @@ responses:
       5.	Help the casualty use the inhaler as required. Monitor vital signs—level of response, breathing, and pulse until help arrives.
   utter_cuts:
   - text: |-
-      Wash the cut properly to prevent infection and stop the bleeding byapplying pressure for 1-2minutes until bleeding stops.
-      Apply Petroleum Jelly to make sure that the wound is moist for quick healing. Finallycover the cut with a sterile bandage.
-      Pain relievers such as acetaminophen can be applied.
+      Wash the cut properly to prevent infection and stop the bleeding by applying pressure for 1-2minutes until bleeding stops.
+      Apply Petroleum Jelly to make sure that the wound is moist for quick healing. Finally cover the cut with a sterile bandage.
+      Pain relievers can be applied if the pain is severe.
   utter_abrasion:
   - text: |-
       1.  Begin with washed hands.Gently clean the area with cool to lukewarm water and mild soap. Remove dirt or other particles from the wound usingsterilized tweezers.
@@ -703,9 +701,8 @@ responses:
   - text: Do not fret, I am here to help
   - text: Please take deep breaths and calm down, I am here with you
   utter_instance:
-  - text: Where there any injuries that occurred?
-  - text: Where any injuries sustained?
-  - text: Is there bleeding or pain anywhere?
+  - text: Did any injury occur? If so what injuries?
+  - text: Were any injuries sustained? If so, what injuries?
 actions:
 - utter_stress
 - utter_instance

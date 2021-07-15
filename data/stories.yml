@@ -130,17 +130,6 @@ stories:
   - intent: cardiac_arrest
   - action: utter_cardiac_arrest
   - action: utter_CPR
-  - action: utter_handle_emergency
-- story: Story from Conversation ID af116d52c6d441df9e12f96cb31e435d
-  steps:
-  - intent: fainting
-  - action: utter_fainting
-  - action: utter_handle_emergency
-  - intent: handle_emergency_unconscious
-  - action: utter_handle_emergency_unconscious
-  - action: utter_recovery_position
-  - intent: nlu_fallback
-  - action: utter_great
 - story: Story from Conversation ID 7938503127e141fda3a0750104bd8345
   steps:
   - intent: external_bleeding
@@ -235,3 +224,114 @@ stories:
   steps:
   - intent: instance
   - action: utter_instance
+- story: Story from Conversation ID 1d4373f11d4a48cda3a9024fea25e8a9
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: greet
+  - action: utter_greet
+  - intent: assess_accident
+  - action: utter_assess_accident
+  - action: utter_did_that_help
+  - intent: stress
+  - action: utter_stress
+  - intent: helpful
+  - action: utter_great
+- story: Story from Conversation ID d6807b7bc9984b78b33648018fecb3fd
+  steps:
+  - intent: broken_bone
+  - action: utter_broken_bone
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: dislocation
+  - action: utter_dislocation
+  - action: utter_handle_emergency
+  - intent: helpful
+  - action: utter_great
+- story: Story from Conversation ID f41950f2aa7745a39c9869f5f491f6b9
+  steps:
+  - intent: strain
+  - action: utter_strain
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+- story: Story from Conversation ID 342ce9e6c1c14b48b850db1d70b1fba0
+  steps:
+  - intent: spinal_neck_injury
+  - action: utter_spinal_neck_injury
+  - intent: spinal_neck_injury_unconscious
+  - action: utter_spinal_neck_injury_unconscious
+  - action: utter_recovery_position_spinal_injury
+  - action: utter_handle_emergency_unconscious
+- story: Story from Conversation ID f8aab5a3889e4a4a8b5c10400bc5ad66
+  steps:
+  - intent: eye_injury
+  - action: utter_eye_injury
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+- story: Story from Conversation ID 5cd8e8b7ddda4bd9b68a16341844ba6d
+  steps:
+  - intent: asthma
+  - action: utter_asthma
+- story: Story from Conversation ID fc920a70fcbd44c5a817ddd9796ba37a
+  steps:
+  - intent: angina
+  - action: utter_angina
+- story: Story from Conversation ID e06acac4b285473eb61cba7bd5e4b058
+  steps:
+  - intent: instance
+  - action: utter_instance
+  - intent: nose_bleed
+  - action: utter_nose_bleed
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID fc1c1334455941ec960ad097c879f75e
+  steps:
+  - intent: ear_bleeding
+  - action: utter_ear_bleeding
+  - intent: head_injury
+  - action: utter_head_injury
+  - intent: head_injury_unconscious
+  - action: utter_head_injury_unconscious
+  - action: utter_handle_emergency_unconscious
+  - intent: taking_casualty_to_hospital
+  - action: utter_taking_casualty_to_hospital
+- story: Story from Conversation ID 3b9ba37fa033435ba8fbad7283648b4d
+  steps:
+  - intent: cuts
+  - action: utter_cuts
+- story: Story from Conversation ID 10e303ad5e044d4099e24b77d52afccf
+  steps:
+  - intent: recovery_position
+  - action: utter_recovery_position
+- story: Story from Conversation ID fb698d56a9b44fdfa82b401c63f1c08d
+  steps:
+  - intent: manage_injured
+  - action: utter_manage_injured
+- story: Story from Conversation ID 5444a713420e4d0a9fc0f0fb279c19e7
+  steps:
+  - intent: severe_choking
+  - action: utter_severe_choking
+- story: Story from Conversation ID 171d91835b2f497e9740d12477648d4b
+  steps:
+  - intent: shock
+  - action: utter_shock
+  - action: utter_handle_emergency
+  - intent: handle_emergency_conscious
+  - action: utter_handle_emergency_conscious
+  - intent: fainting
+  - action: utter_fainting
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+- story: Story from Conversation ID 12e59842e7c04e33bac468cbbf5e3111
+  steps:
+  - intent: fainting
+  - action: utter_fainting
+  - action: utter_handle_emergency_unconscious
+  - action: utter_recovery_position
+- story: Story from Conversation ID 5aceface0c17497ba7527c48c9e39789
+  steps:
+  - intent: open_wound
+  - action: utter_open_wound
